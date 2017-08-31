@@ -20,10 +20,11 @@
 		699D040C1F37CAD400FC9EB5 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D04091F37CAD400FC9EB5 /* ReactiveSwift.framework */; };
 		69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2CD951F58C3D500E29590 /* LapTime.swift */; };
 		69A2CD9C1F58C92100E29590 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2CD9B1F58C92100E29590 /* Race.swift */; };
+		69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2CD9D1F58C9E800E29590 /* Circuit.swift */; };
 		69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */; };
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
-		69BA3E071F37B5D000CDC700 /* TimeCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3E061F37B5D000CDC700 /* TimeCoachTests.swift */; };
+		69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */; };
 		B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */; };
 		EE83C85A1EFE9066CF9E7F2E /* Pods_KartingCoachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,13 +55,14 @@
 		699D04091F37CAD400FC9EB5 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		69A2CD951F58C3D500E29590 /* LapTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTime.swift; sourceTree = "<group>"; };
 		69A2CD9B1F58C92100E29590 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		69A2CD9D1F58C9E800E29590 /* Circuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuit.swift; sourceTree = "<group>"; };
 		69BA3DEE1F37B5D000CDC700 /* KartingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KartingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BA3DF81F37B5D000CDC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69BA3DFB1F37B5D000CDC700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69BA3DFD1F37B5D000CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69BA3E021F37B5D000CDC700 /* KartingCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KartingCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		69BA3E061F37B5D000CDC700 /* TimeCoachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCoachTests.swift; sourceTree = "<group>"; };
+		69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTests.swift; sourceTree = "<group>"; };
 		69BA3E081F37B5D000CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				69A2CD951F58C3D500E29590 /* LapTime.swift */,
 				69A2CD9B1F58C92100E29590 /* Race.swift */,
+				69A2CD9D1F58C9E800E29590 /* Circuit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +190,7 @@
 		69BA3E051F37B5D000CDC700 /* KartingCoachTests */ = {
 			isa = PBXGroup;
 			children = (
-				69BA3E061F37B5D000CDC700 /* TimeCoachTests.swift */,
+				69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */,
 				69BA3E081F37B5D000CDC700 /* Info.plist */,
 			);
 			path = KartingCoachTests;
@@ -439,6 +442,7 @@
 				69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */,
 				69A2CD9C1F58C92100E29590 /* Race.swift in Sources */,
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
+				69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69BA3E071F37B5D000CDC700 /* TimeCoachTests.swift in Sources */,
+				69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

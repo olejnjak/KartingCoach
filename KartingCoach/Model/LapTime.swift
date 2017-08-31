@@ -8,12 +8,18 @@
 import Foundation
 
 struct LapTime {
-    let minutes: Int
-    let seconds: Int
-    let miliseconds: Int
+    let minutes: UInt
+    let seconds: UInt
+    let miliseconds: UInt
     
-    private var duration: Int {
+    var duration: UInt {
         return miliseconds + seconds * 1000 + minutes * 60 * 1000
+    }
+}
+
+extension LapTime {
+    init(duration: UInt) {
+        self.init(minutes: duration / 1000 / 60, seconds: duration / 1000 % 60, miliseconds: duration % 1000)
     }
 }
 
