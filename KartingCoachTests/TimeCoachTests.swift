@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import KartingCoachCoach
+@testable import KartingCoach
 
 class KartingCoachCoachTests: XCTestCase {
     
