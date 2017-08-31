@@ -1,14 +1,14 @@
 //
-//  TimeCoachTests.swift
-//  TimeCoachTests
+//  KartingCoachTests.swift
+//  KartingCoachTests
 //
 //  Created by Jakub Olejník on 06/08/2017.
 //
 
 import XCTest
-@testable import TimeCoach
+@testable import KartingCoachCoach
 
-class TimeCoachTests: XCTestCase {
+class KartingCoachCoachTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
