@@ -7,7 +7,6 @@ language: objective-c
 cache: cocoapods
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
-- brew upgrade carthage
 - pod install
 - carthage bootstrap --platform iOS
 script:
