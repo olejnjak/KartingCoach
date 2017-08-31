@@ -18,6 +18,7 @@
 		699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */; };
 		699D040B1F37CAD400FC9EB5 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D04081F37CAD400FC9EB5 /* Result.framework */; };
 		699D040C1F37CAD400FC9EB5 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D04091F37CAD400FC9EB5 /* ReactiveSwift.framework */; };
+		69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2CD951F58C3D500E29590 /* LapTime.swift */; };
 		69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */; };
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 		699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		699D04081F37CAD400FC9EB5 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		699D04091F37CAD400FC9EB5 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		69A2CD951F58C3D500E29590 /* LapTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTime.swift; sourceTree = "<group>"; };
 		69BA3DEE1F37B5D000CDC700 /* KartingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KartingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BA3DF81F37B5D000CDC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			path = "View controllers";
 			sourceTree = "<group>";
 		};
+		69A2CD921F58C37A00E29590 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				69A2CD951F58C3D500E29590 /* LapTime.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		69BA3DE31F37B53100CDC700 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		69BA3DF01F37B5D000CDC700 /* KartingCoach */ = {
 			isa = PBXGroup;
 			children = (
+				69A2CD921F58C37A00E29590 /* Model */,
 				699D03FF1F37C4C500FC9EB5 /* Flow controllers */,
 				699D04001F37C4C500FC9EB5 /* View controllers */,
 				69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */,
@@ -422,6 +433,7 @@
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
 				699D04021F37C4C500FC9EB5 /* ViewController.swift in Sources */,
 				69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */,
+				69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */,
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
