@@ -14,4 +14,8 @@ struct Race {
     var bestTime: LapTime? {
         return lapTimes.min()
     }
+    
+    var averageTime: LapTime? {
+        return lapTimes.average()
+    }
 }

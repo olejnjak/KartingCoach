@@ -8,6 +8,8 @@
 import Foundation
 
 struct LapTime {
+    static var zero: LapTime { return LapTime(duration: 0) }
+    
     let minutes: UInt
     let seconds: UInt
     let miliseconds: UInt
@@ -58,4 +60,11 @@ func +(lhs: LapTime, rhs: LapTime) -> LapTime {
 
 func /(lhs: LapTime, rhs: UInt) -> LapTime {
     return LapTime(duration: lhs.duration / rhs)
+}
+
+extension Collection where Iterator.Element == LapTime {
+    func average() -> Iterator.Element? {
+        if isEmpty { return nil }
+        return reduce(.zero, +) / UInt(count)
+    }
 }

@@ -14,4 +14,8 @@ struct Circuit {
     var bestTime: LapTime? {
         return races.flatMap { $0.bestTime }.min()
     }
+    
+    var averageTime: LapTime? {
+        return races.flatMap { $0.averageTime }.average()
+    }
 }
