@@ -18,6 +18,11 @@ struct LapTime {
 }
 
 extension LapTime {
+    /**
+      * Initialize new lap time
+      *
+      * - parameter duration: Duration of lap time in miliseconds
+      */
     init(duration: UInt) {
         self.init(minutes: duration / 1000 / 60, seconds: duration / 1000 % 60, miliseconds: duration % 1000)
     }
@@ -45,4 +50,12 @@ extension LapTime: Comparable {
     static func==(lhs: LapTime, rhs: LapTime) -> Bool {
         return lhs.duration == rhs.duration
     }
+}
+
+func +(lhs: LapTime, rhs: LapTime) -> LapTime {
+    return LapTime(duration: lhs.duration + rhs.duration)
+}
+
+func /(lhs: LapTime, rhs: UInt) -> LapTime {
+    return LapTime(duration: lhs.duration / rhs)
 }

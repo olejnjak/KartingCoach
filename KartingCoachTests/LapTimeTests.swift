@@ -16,5 +16,29 @@ final class LapTimeTests: XCTestCase {
         
         XCTAssertEqual(lapTime.duration, duration)
     }
+ 
+    func testPlusOperation() {
+        let (lt1, lt2) = (LapTime.random, LapTime.random)
+        let newLT = lt1 + lt2
+        
+        XCTAssertEqual(newLT.duration, lt1.duration + lt2.duration)
+    }
     
+    func testDivideOperation() {
+        let lt = LapTime.random
+        let div = ((UInt.random + 2) % 20)
+        let divided = lt / div
+        
+        XCTAssertEqual(lt.duration / div, divided.duration)
+    }
+    
+    func testAverageLapTime() {
+        let itemCount = (UInt.random % 20) + 3
+        let items = (0..<itemCount).map { _ in LapTime.random }
+        
+        let duration = items.reduce(0) { $0 + $1.duration }
+        let average = items.reduce(LapTime(duration: 0), +) / itemCount
+        
+        XCTAssertEqual(average.duration, duration / itemCount)
+    }
 }

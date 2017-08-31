@@ -21,6 +21,8 @@
 		69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2CD951F58C3D500E29590 /* LapTime.swift */; };
 		69A2CD9C1F58C92100E29590 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2CD9B1F58C92100E29590 /* Race.swift */; };
 		69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2CD9D1F58C9E800E29590 /* Circuit.swift */; };
+		69AC8FC11F58CD8600E80EB7 /* LapTimeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC8FC01F58CD8600E80EB7 /* LapTimeHelpers.swift */; };
+		69AC8FC31F58CE7100E80EB7 /* GeneralHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC8FC21F58CE7100E80EB7 /* GeneralHelpers.swift */; };
 		69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */; };
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
@@ -56,6 +58,8 @@
 		69A2CD951F58C3D500E29590 /* LapTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTime.swift; sourceTree = "<group>"; };
 		69A2CD9B1F58C92100E29590 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		69A2CD9D1F58C9E800E29590 /* Circuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuit.swift; sourceTree = "<group>"; };
+		69AC8FC01F58CD8600E80EB7 /* LapTimeHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeHelpers.swift; sourceTree = "<group>"; };
+		69AC8FC21F58CE7100E80EB7 /* GeneralHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralHelpers.swift; sourceTree = "<group>"; };
 		69BA3DEE1F37B5D000CDC700 /* KartingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KartingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BA3DF81F37B5D000CDC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +157,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		69AC8FBF1F58CD7A00E80EB7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				69AC8FC01F58CD8600E80EB7 /* LapTimeHelpers.swift */,
+				69AC8FC21F58CE7100E80EB7 /* GeneralHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		69BA3DE31F37B53100CDC700 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +203,7 @@
 		69BA3E051F37B5D000CDC700 /* KartingCoachTests */ = {
 			isa = PBXGroup;
 			children = (
+				69AC8FBF1F58CD7A00E80EB7 /* Helpers */,
 				69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */,
 				69BA3E081F37B5D000CDC700 /* Info.plist */,
 			);
@@ -450,6 +464,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69AC8FC31F58CE7100E80EB7 /* GeneralHelpers.swift in Sources */,
+				69AC8FC11F58CD8600E80EB7 /* LapTimeHelpers.swift in Sources */,
 				69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
