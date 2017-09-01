@@ -26,7 +26,7 @@ final class LapTimeTests: XCTestCase {
     
     func testDivideOperation() {
         let lt = LapTime.random
-        let div = ((Int.random + 2) % 20)
+        let div = (Int.random % 20) + 2
         let divided = lt / div
         
         XCTAssertEqual(lt.duration / div, divided.duration)
