@@ -4,7 +4,10 @@
 
 osx_image: xcode9
 language: objective-c
-cache: cocoapods
+cache: 
+  directories:
+  - Carthage
+  - Pods
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --repo-update
