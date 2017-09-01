@@ -10,7 +10,7 @@ import Foundation
 
 extension LapTime {
     static var random: LapTime {
-        let duration = UInt.random + 20
+        let duration = Int.random + 20
         return LapTime(duration: duration)
     }
 }

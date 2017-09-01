@@ -7,6 +7,6 @@
 
 import Foundation
 
-extension UInt {
-    static var random: UInt { return UInt(arc4random()) }
+extension Int {
+    static var random: Int { return Int(arc4random()) }
 }

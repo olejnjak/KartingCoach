@@ -10,26 +10,29 @@ import Foundation
 struct LapTime {
     static var zero: LapTime { return LapTime(duration: 0) }
     
-    let minutes: UInt
-    let seconds: UInt
-    let miliseconds: UInt
+    let minutes: Int
+    let seconds: Int
+    let miliseconds: Int
     
-    var duration: UInt {
+    var duration: Int {
         return miliseconds + seconds * 1000 + minutes * 60 * 1000
     }
-}
-
-extension LapTime {
+    
+    // MARK: - Initializers
+    
     /**
-      * Initialize new lap time
-      *
-      * - parameter duration: Duration of lap time in miliseconds
-      */
-    init(duration: UInt) {
-        self.init(minutes: duration / 1000 / 60, seconds: duration / 1000 % 60, miliseconds: duration % 1000)
+     * Initialize new lap time
+     *
+     * - parameter duration: Duration of lap time in miliseconds
+     */
+    init(duration: Int) {
+        assert(duration >= 0, "Duration has to be greater than or equal to 0")
+        
+        minutes = duration / 1000 / 60
+        seconds = duration / 1000 % 60
+        miliseconds = duration % 1000
     }
 }
-
 extension LapTime: CustomStringConvertible {
     var description: String {
         let decimalSeparator = Locale.current.decimalSeparator ?? "."
@@ -58,13 +61,13 @@ func + (lhs: LapTime, rhs: LapTime) -> LapTime {
     return LapTime(duration: lhs.duration + rhs.duration)
 }
 
-func / (lhs: LapTime, rhs: UInt) -> LapTime {
+func / (lhs: LapTime, rhs: Int) -> LapTime {
     return LapTime(duration: lhs.duration / rhs)
 }
 
 extension Collection where Iterator.Element == LapTime {
     func average() -> Iterator.Element? {
         if isEmpty { return nil }
-        return reduce(.zero, +) / UInt(count)
+        return reduce(.zero, +) / Int(count)
     }
 }
