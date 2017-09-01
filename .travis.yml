@@ -9,8 +9,10 @@ cache:
   - Carthage
   - Pods
 before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
 - gem install cocoapods # Since Travis is not always on latest version
-- pod install --repo-update
-- carthage build --platform iOS
+- pod install || pod install --repo-update
+- carthage bootstrap --platform iOS
 script:
 - set -o pipefail && xcodebuild test -workspace KartingCoach.xcworkspace -scheme KartingCoach -sdk iphonesimulator11.0 -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0' ONLY_ACTIVE_ARCH=NO | xcpretty
