@@ -45,20 +45,20 @@ extension LapTime: CustomDebugStringConvertible {
 }
 
 extension LapTime: Comparable {
-    static func<(lhs: LapTime, rhs: LapTime) -> Bool {
+    static func < (lhs: LapTime, rhs: LapTime) -> Bool {
         return lhs.duration < rhs.duration
     }
     
-    static func==(lhs: LapTime, rhs: LapTime) -> Bool {
+    static func == (lhs: LapTime, rhs: LapTime) -> Bool {
         return lhs.duration == rhs.duration
     }
 }
 
-func +(lhs: LapTime, rhs: LapTime) -> LapTime {
+func + (lhs: LapTime, rhs: LapTime) -> LapTime {
     return LapTime(duration: lhs.duration + rhs.duration)
 }
 
-func /(lhs: LapTime, rhs: UInt) -> LapTime {
+func / (lhs: LapTime, rhs: UInt) -> LapTime {
     return LapTime(duration: lhs.duration / rhs)
 }
 
