@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
 		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
 		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
 		699D03FC1F37C13500FC9EB5 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F71F37C13500FC9EB5 /* ReSwift.framework */; };
 		699D03FD1F37C13500FC9EB5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F81F37C13500FC9EB5 /* Alamofire.framework */; };
-		699D04021F37C4C500FC9EB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04011F37C4C500FC9EB5 /* ViewController.swift */; };
 		699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04031F37C4D000FC9EB5 /* AppFlowController.swift */; };
 		699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04051F37C4F200FC9EB5 /* FlowController.swift */; };
 		699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */; };
@@ -27,6 +27,13 @@
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
 		69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */; };
+		69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6661F6484BC0090740B /* LapTimeStore.swift */; };
+		69EFE6691F6486E40090740B /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6681F6486E40090740B /* AppDependency.swift */; };
+		69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */; };
+		69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE66D1F64881B0090740B /* BaseViewController.swift */; };
+		69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6701F64886E0090740B /* CircuitListViewModel.swift */; };
+		69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */; };
+		69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6791F648D070090740B /* CircuitTableViewCell.swift */; };
 		B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */; };
 		EE83C85A1EFE9066CF9E7F2E /* Pods_KartingCoachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */; };
 /* End PBXBuildFile section */
@@ -44,12 +51,12 @@
 /* Begin PBXFileReference section */
 		0C9F7C8A1B667F90BA797A7B /* Pods-KartingCoach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.debug.xcconfig"; sourceTree = "<group>"; };
 		28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitFlowController.swift; sourceTree = "<group>"; };
 		699D03F41F37C13500FC9EB5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
 		699D03F71F37C13500FC9EB5 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		699D03F81F37C13500FC9EB5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		699D04011F37C4C500FC9EB5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		699D04031F37C4D000FC9EB5 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		699D04051F37C4F200FC9EB5 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
@@ -68,6 +75,13 @@
 		69BA3E021F37B5D000CDC700 /* KartingCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KartingCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTests.swift; sourceTree = "<group>"; };
 		69BA3E081F37B5D000CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69EFE6661F6484BC0090740B /* LapTimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeStore.swift; sourceTree = "<group>"; };
+		69EFE6681F6486E40090740B /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewController.swift; sourceTree = "<group>"; };
+		69EFE66D1F64881B0090740B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		69EFE6701F64886E0090740B /* CircuitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewModel.swift; sourceTree = "<group>"; };
+		69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		69EFE6791F648D070090740B /* CircuitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitTableViewCell.swift; sourceTree = "<group>"; };
 		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +149,7 @@
 			children = (
 				699D04031F37C4D000FC9EB5 /* AppFlowController.swift */,
 				699D04051F37C4F200FC9EB5 /* FlowController.swift */,
+				696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */,
 			);
 			path = "Flow controllers";
 			sourceTree = "<group>";
@@ -142,7 +157,8 @@
 		699D04001F37C4C500FC9EB5 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				699D04011F37C4C500FC9EB5 /* ViewController.swift */,
+				69EFE66C1F64880F0090740B /* Base */,
+				69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -189,10 +205,15 @@
 		69BA3DF01F37B5D000CDC700 /* KartingCoach */ = {
 			isa = PBXGroup;
 			children = (
+				69EFE6721F648A280090740B /* Extensions */,
+				69EFE6651F6484940090740B /* Services */,
 				69A2CD921F58C37A00E29590 /* Model */,
 				699D03FF1F37C4C500FC9EB5 /* Flow controllers */,
+				69EFE6771F648CE70090740B /* Views */,
 				699D04001F37C4C500FC9EB5 /* View controllers */,
+				69EFE66F1F64885A0090740B /* View models */,
 				69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */,
+				69EFE6681F6486E40090740B /* AppDependency.swift */,
 				69BA3DF81F37B5D000CDC700 /* Assets.xcassets */,
 				69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */,
 				69BA3DFD1F37B5D000CDC700 /* Info.plist */,
@@ -208,6 +229,54 @@
 				69BA3E081F37B5D000CDC700 /* Info.plist */,
 			);
 			path = KartingCoachTests;
+			sourceTree = "<group>";
+		};
+		69EFE6651F6484940090740B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				69EFE6661F6484BC0090740B /* LapTimeStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		69EFE66C1F64880F0090740B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				69EFE66D1F64881B0090740B /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		69EFE66F1F64885A0090740B /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				69EFE6701F64886E0090740B /* CircuitListViewModel.swift */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
+		69EFE6721F648A280090740B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		69EFE6771F648CE70090740B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69EFE6781F648CF90090740B /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		69EFE6781F648CF90090740B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				69EFE6791F648D070090740B /* CircuitTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,11 +520,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
-				699D04021F37C4C500FC9EB5 /* ViewController.swift in Sources */,
+				696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */,
 				69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */,
+				69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */,
 				69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */,
 				69A2CD9C1F58C92100E29590 /* Race.swift in Sources */,
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
+				69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */,
+				69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */,
+				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,
+				69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */,
+				69EFE6691F6486E40090740B /* AppDependency.swift in Sources */,
+				69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */,
 				69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@ inhibit_all_warnings!
 
 target 'KartingCoach' do
     # Model
-    pod 'SwiftGen', '~> 4.2'
+    pod 'SwiftGen', '~> 5.1'
     
     # 3rd parties
     pod 'Firebase', '~> 4.0'

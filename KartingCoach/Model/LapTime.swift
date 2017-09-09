@@ -33,6 +33,7 @@ struct LapTime {
         miliseconds = duration % 1000
     }
 }
+
 extension LapTime: CustomStringConvertible {
     var description: String {
         let decimalSeparator = Locale.current.decimalSeparator ?? "."
