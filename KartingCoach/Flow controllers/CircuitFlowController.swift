@@ -23,8 +23,17 @@ final class CircuitFlowController: FlowController {
     func start() {
         let circuitListVM = CircuitListViewModel(dependencies: dependencies)
         let circuitListVC = CircuitListViewController(viewModel: circuitListVM)
-        
+        circuitListVC.flowDelegate = self
         navigationController.viewControllers = [circuitListVC]
+    }
+}
+
+extension CircuitFlowController: CircuitListFlowDelegate {
+    
+    func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit) {
+        let detailVM = CircuitDetailViewModel(circuit: circuit)
+        let detailVC = CircuitDetailViewController(viewModel: detailVM)
+        navigationController.pushViewController(detailVC, animated: true)
     }
     
 }

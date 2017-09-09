@@ -10,7 +10,13 @@ import SnapKit
 import ReactiveSwift
 import ReactiveCocoa
 
+protocol CircuitListFlowDelegate: class {
+    func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit)
+}
+
 final class CircuitListViewController: BaseViewController {
+    
+    weak var flowDelegate: CircuitListFlowDelegate?
     
     private weak var tableView: UITableView!
     
@@ -21,6 +27,7 @@ final class CircuitListViewController: BaseViewController {
     init(viewModel: CircuitListViewModeling) {
         self.viewModel = viewModel
         super.init()
+        title = L10n.CircuitList.title
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,6 +82,10 @@ extension CircuitListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        flowDelegate?.circuitList(self, didSelect: viewModel.circuits.value[indexPath.row])
     }
     
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return viewModel.circuits.value[indexPath.row].bestTime != nil
+    }
 }

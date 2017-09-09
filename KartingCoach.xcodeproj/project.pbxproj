@@ -26,6 +26,8 @@
 		696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696FD6811F64923D00DDDFE5 /* Localizable.strings */; };
 		696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */; };
 		696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6861F6495EC00DDDFE5 /* Assets.swift */; };
+		696FD68B1F64985900DDDFE5 /* CircuitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68A1F64985900DDDFE5 /* CircuitDetailViewModel.swift */; };
+		696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
 		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
 		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
@@ -80,6 +82,8 @@
 		696FD6821F64924700DDDFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		696FD6861F6495EC00DDDFE5 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		696FD68A1F64985900DDDFE5 /* CircuitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircuitDetailViewModel.swift; path = "KartingCoach/View models/CircuitDetailViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircuitDetailViewController.swift; path = "KartingCoach/View controllers/CircuitDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		699D03F41F37C13500FC9EB5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				69BA3DF81F37B5D000CDC700 /* Assets.xcassets */,
 				69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */,
 				696FD6811F64923D00DDDFE5 /* Localizable.strings */,
+				696FD68A1F64985900DDDFE5 /* CircuitDetailViewModel.swift */,
+				696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
+				696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */,
 				696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */,
 				69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */,
 				69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */,
@@ -602,6 +609,7 @@
 				69A2CD9C1F58C92100E29590 /* Race.swift in Sources */,
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
 				69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */,
+				696FD68B1F64985900DDDFE5 /* CircuitDetailViewModel.swift in Sources */,
 				69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */,
 				696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */,
 				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,
