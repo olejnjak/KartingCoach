@@ -12,6 +12,7 @@
 			buildConfigurationList = 696FD67A1F64919800DDDFE5 /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
 			buildPhases = (
 				696FD67B1F6491A300DDDFE5 /* Generate string enums */,
+				696FD6851F64956A00DDDFE5 /* Generate image enums */,
 			);
 			dependencies = (
 			);
@@ -24,6 +25,7 @@
 		696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */; };
 		696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696FD6811F64923D00DDDFE5 /* Localizable.strings */; };
 		696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */; };
+		696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6861F6495EC00DDDFE5 /* Assets.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
 		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
 		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
@@ -70,6 +72,7 @@
 		696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitFlowController.swift; sourceTree = "<group>"; };
 		696FD6821F64924700DDDFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		696FD6861F6495EC00DDDFE5 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		699D03F41F37C13500FC9EB5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 		696FD67C1F64921A00DDDFE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				696FD6861F6495EC00DDDFE5 /* Assets.swift */,
 				696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */,
 				69BA3DF81F37B5D000CDC700 /* Assets.xcassets */,
 				69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */,
@@ -510,7 +514,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SWIFTGEN=\"$PROJECT_DIR/Pods/SwiftGen/bin/swiftgen\"\nRESOURCES=\"$PROJECT_DIR/KartingCoach/Resources\"\n$SWIFTGEN strings -t structured-swift4 \"$RESOURCES/Base.lproj/Localizable.strings\" > \"$RESOURCES/LocalizedStrings.swift\"";
+			shellScript = "$SWIFTGEN strings -t structured-swift4 \"$RESOURCES/Base.lproj/Localizable.strings\" > \"$RESOURCES/LocalizedStrings.swift\"";
+		};
+		696FD6851F64956A00DDDFE5 /* Generate image enums */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate image enums";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SWIFTGEN xcassets -t swift4 \"$RESOURCES/Assets.xcassets\" > \"$RESOURCES/Assets.swift\"";
 		};
 		699D03FE1F37C14E00FC9EB5 /* Carthage stuff */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -577,6 +595,7 @@
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
 				69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */,
 				69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */,
+				696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */,
 				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,
 				69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */,
 				69EFE6691F6486E40090740B /* AppDependency.swift in Sources */,
@@ -631,6 +650,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
+				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
 			};
 			name = Debug;
 		};
@@ -640,6 +661,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
+				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
 			};
 			name = Release;
 		};
