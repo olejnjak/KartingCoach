@@ -6,15 +6,16 @@
 //
 
 protocol CircuitDetailViewModeling {
-    
+    var name: String { get }
 }
 
 final class CircuitDetailViewModel: CircuitDetailViewModeling {
+    let name: String
     
     // MARK: Initializers
     
     init(circuit: Circuit) {
-        
+        name = circuit.name
     }
     
 }

@@ -13,6 +13,7 @@ final class CircuitDetailViewController: BaseViewController {
     
     init(viewModel: CircuitDetailViewModeling) {
         super.init()
+        title = viewModel.name
     }
     
     required init?(coder aDecoder: NSCoder) {
