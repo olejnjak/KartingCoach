@@ -36,4 +36,19 @@ extension CircuitFlowController: CircuitListFlowDelegate {
         navigationController.pushViewController(detailVC, animated: true)
     }
     
+    func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController) {
+        let newCircuitVM = NewCircuitViewModel()
+        let newCircuitVC = NewCircuitViewController(viewModel: newCircuitVM)
+        let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
+        newCircuitVC.flowDelegate = self
+        viewController.present(newCircuitNav, animated: true, completion: nil)
+    }
+}
+
+extension CircuitFlowController: NewCircuitFlowDelegate {
+    
+    func newCircuitDidCancel(_ viewController: NewCircuitViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
 }

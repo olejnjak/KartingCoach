@@ -12,6 +12,7 @@ import ReactiveCocoa
 
 protocol CircuitListFlowDelegate: class {
     func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit)
+    func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController)
 }
 
 final class CircuitListViewController: BaseViewController {
@@ -52,10 +53,19 @@ final class CircuitListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newCircuitTapped))
+        
         tableView.dataSource = self
         tableView.delegate = self
         
         setupBindings()
+    }
+    
+    // MARK: UI actions
+    
+    @objc
+    private func newCircuitTapped() {
+        flowDelegate?.circuitListDidTapNewCircuit(self)
     }
     
     // MARK: Private helpers

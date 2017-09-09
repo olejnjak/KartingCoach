@@ -11,6 +11,11 @@ enum L10n {
     /// Circuits
     static let title = L10n.tr("Localizable", "circuit_list.title")
   }
+
+  enum NewCircuit {
+    /// New circuit
+    static let title = L10n.tr("Localizable", "new_circuit.title")
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 
