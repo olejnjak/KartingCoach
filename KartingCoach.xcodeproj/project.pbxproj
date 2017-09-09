@@ -57,6 +57,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		696FD6881F64962700DDDFE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69BA3DE41F37B53100CDC700 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 696FD6771F64919800DDDFE5;
+			remoteInfo = SwiftGen;
+		};
 		69BA3E031F37B5D000CDC700 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69BA3DE41F37B53100CDC700 /* Project object */;
@@ -329,6 +336,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				696FD6891F64962700DDDFE5 /* PBXTargetDependency */,
 			);
 			name = KartingCoach;
 			productName = TimeCoach;
@@ -617,6 +625,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		696FD6891F64962700DDDFE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 696FD6771F64919800DDDFE5 /* SwiftGen */;
+			targetProxy = 696FD6881F64962700DDDFE5 /* PBXContainerItemProxy */;
+		};
 		69BA3E041F37B5D000CDC700 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 69BA3DED1F37B5D000CDC700 /* KartingCoach */;
@@ -651,6 +664,8 @@
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
 			};
 			name = Debug;
@@ -662,6 +677,8 @@
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
 			};
 			name = Release;
