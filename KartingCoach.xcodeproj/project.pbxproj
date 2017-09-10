@@ -12,7 +12,7 @@
 			buildConfigurationList = 696FD67A1F64919800DDDFE5 /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
 			buildPhases = (
 				696FD67B1F6491A300DDDFE5 /* Generate string enums */,
-				696FD6851F64956A00DDDFE5 /* Generate image enums */,
+				696FD6851F64956A00DDDFE5 /* Generate assets enums */,
 			);
 			dependencies = (
 			);
@@ -48,7 +48,8 @@
 		69AC8FC11F58CD8600E80EB7 /* LapTimeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC8FC01F58CD8600E80EB7 /* LapTimeHelpers.swift */; };
 		69AC8FC31F58CE7100E80EB7 /* GeneralHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC8FC21F58CE7100E80EB7 /* GeneralHelpers.swift */; };
 		69B2162F1F65395600047B7E /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B2162E1F65395600047B7E /* Formatters.swift */; };
-		69B216311F653D0D00047B7E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B216301F653D0D00047B7E /* Colors.xcassets */; };
+		69B216361F6540D000047B7E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B216351F6540D000047B7E /* Colors.swift */; };
+		69B216381F65448E00047B7E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B216371F65448E00047B7E /* Chameleon.framework */; };
 		69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */; };
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
@@ -110,7 +111,8 @@
 		69AC8FC01F58CD8600E80EB7 /* LapTimeHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeHelpers.swift; sourceTree = "<group>"; };
 		69AC8FC21F58CE7100E80EB7 /* GeneralHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralHelpers.swift; sourceTree = "<group>"; };
 		69B2162E1F65395600047B7E /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
-		69B216301F653D0D00047B7E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		69B216351F6540D000047B7E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		69B216371F65448E00047B7E /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		69BA3DEE1F37B5D000CDC700 /* KartingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KartingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BA3DF81F37B5D000CDC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B216381F65448E00047B7E /* Chameleon.framework in Frameworks */,
 				699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */,
 				699D040B1F37CAD400FC9EB5 /* Result.framework in Frameworks */,
 				699D040C1F37CAD400FC9EB5 /* ReactiveSwift.framework in Frameworks */,
@@ -174,6 +177,7 @@
 		5DF8F5BFD31C194FE0920308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69B216371F65448E00047B7E /* Chameleon.framework */,
 				699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */,
 				699D04091F37CAD400FC9EB5 /* ReactiveSwift.framework */,
 				699D04081F37CAD400FC9EB5 /* Result.framework */,
@@ -192,9 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				696FD6861F6495EC00DDDFE5 /* Assets.swift */,
+				69B216351F6540D000047B7E /* Colors.swift */,
 				696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */,
 				69BA3DF81F37B5D000CDC700 /* Assets.xcassets */,
-				69B216301F653D0D00047B7E /* Colors.xcassets */,
 				69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */,
 				696FD6811F64923D00DDDFE5 /* Localizable.strings */,
 			);
@@ -436,7 +440,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */,
-				69B216311F653D0D00047B7E /* Colors.xcassets in Resources */,
 				696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */,
 				69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */,
 			);
@@ -549,14 +552,14 @@
 			shellPath = /bin/sh;
 			shellScript = "$SWIFTGEN strings -t structured-swift4 \"$RESOURCES/Base.lproj/Localizable.strings\" > \"$RESOURCES/LocalizedStrings.swift\"";
 		};
-		696FD6851F64956A00DDDFE5 /* Generate image enums */ = {
+		696FD6851F64956A00DDDFE5 /* Generate assets enums */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Generate image enums";
+			name = "Generate assets enums";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +580,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
 			);
 			name = "Carthage stuff";
 			outputPaths = (
@@ -588,6 +592,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Chameleon.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -619,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */,
+				69B216361F6540D000047B7E /* Colors.swift in Sources */,
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
 				696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */,
 				696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */,

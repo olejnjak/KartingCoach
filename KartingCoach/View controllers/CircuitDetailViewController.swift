@@ -71,16 +71,9 @@ extension CircuitDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let lapTime = viewModel.races[indexPath.section].lapTimes[indexPath.row]
-        let cell: UITableViewCell & LapTimeCell
-        
-        if lapTime == viewModel.bestTime {
-            cell = tableView.dequeueCell(for: indexPath) as BestLapTimeTableViewCell
-        } else {
-            cell = tableView.dequeueCell(for: indexPath) as LapTimeTableViewCell
-        }
-        
+        let cell: LapTimeTableViewCell = tableView.dequeueCell(for: indexPath)
         cell.setLapTime(time: lapTime, lapNumber: indexPath.row + 1)
-        
+        cell.contentView.backgroundColor = lapTime == viewModel.bestTime ? .bestTime : nil
         return cell
     }
 }
