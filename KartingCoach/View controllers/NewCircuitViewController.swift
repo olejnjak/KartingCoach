@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 protocol NewCircuitFlowDelegate: class {
     func newCircuitDidCancel(_ viewController: NewCircuitViewController)
@@ -17,7 +18,14 @@ final class NewCircuitViewController: BaseViewController {
     private let viewModel: NewCircuitViewModeling
     
     private weak var tableView: UITableView!
-    private weak var textField: UITextField?
+    private weak var textField: UITextField? {
+        didSet {
+            guard let textField = textField else { return }
+            textFieldDisposable?.dispose()
+            textFieldDisposable = viewModel.name <~ textField.reactive.continuousTextValues
+        }
+    }
+    private var textFieldDisposable: Disposable?
     
     weak var flowDelegate: NewCircuitFlowDelegate?
     
@@ -69,7 +77,7 @@ final class NewCircuitViewController: BaseViewController {
     
     @objc
     private func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        viewModel.addCircuit.apply(textField?.text).start()
+        viewModel.addCircuit.apply().start()
     }
     
     // MARK: - Bindings
@@ -78,6 +86,8 @@ final class NewCircuitViewController: BaseViewController {
         displayErrors(for: viewModel.addCircuit)
         
         viewModel.addCircuit.completed.observeValues { [weak self] in self?.flowDelegate?.newCircuitDidAdd(self!) }
+        
+        navigationItem.rightBarButtonItem!.reactive.isEnabled <~ viewModel.doneEnabled
     }
 }
 

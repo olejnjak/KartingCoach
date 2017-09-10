@@ -8,7 +8,9 @@
 import ReactiveSwift
 
 protocol NewCircuitViewModeling {
-    var addCircuit: Action<String?, Circuit, NewCircuitError> { get }
+    var addCircuit: Action<Void, Circuit, NewCircuitError> { get }
+    var doneEnabled: Property<Bool> { get }
+    var name: MutableProperty<String?> { get }
 }
 
 final class NewCircuitViewModel: NewCircuitViewModeling {
@@ -17,9 +19,14 @@ final class NewCircuitViewModel: NewCircuitViewModeling {
     
     private let circuitStore: CircuitStore
     
-    lazy var addCircuit: Action<String?, Circuit, NewCircuitError> = Action { [unowned self] circuitName in
+    let name = MutableProperty<String?>(nil)
+    let doneEnabled: Property<Bool>
+    
+    // MARK: Actions
+    
+    lazy var addCircuit: Action<Void, Circuit, NewCircuitError> = Action(enabledIf: self.doneEnabled) { [unowned self] in
         return SignalProducer<Circuit, NewCircuitError> { [unowned self] sink, _ in
-            guard let circuitName = circuitName else {
+            guard let circuitName = self.name.value, !circuitName.isEmpty else {
                 sink.send(error: .emptyName)
                 return
             }
@@ -42,6 +49,7 @@ final class NewCircuitViewModel: NewCircuitViewModeling {
     
     init(dependencies: Dependencies) {
         self.circuitStore = dependencies.circuitStore
+        self.doneEnabled = self.name.map { $0 ?? "" }.map { !$0.isEmpty }
     }
     
 }
