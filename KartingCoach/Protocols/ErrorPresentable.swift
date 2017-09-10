@@ -15,13 +15,13 @@ protocol ErrorPresentable {
 extension UIViewController: ErrorPresentable {
     
     func displayErrors<Input, Output, Error>(for action: Action<Input, Output, Error>) where Error: DisplayableError {
-        action.errors.observeValues { [weak self] error in
+        action.errors.take(during: reactive.lifetime).observeValues { [unowned self] error in
             let alertController = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: L10n.Basic.ok, style: .default, handler: nil)
             alertController.addAction(okAction)
             
-            self?.present(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 
