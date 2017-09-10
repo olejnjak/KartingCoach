@@ -12,7 +12,7 @@ let container: Container = {
     let c = Container()
     
     c.autoregister(AppDependency.self, initializer: AppDependency.init)
-    c.register(CircuitStore.self) { _ in LapTimeStore() }
+    c.register(CircuitStore.self) { _ in LapTimeStore() }.inObjectScope(.container)
     
     c.autoregister(AppFactory.self, initializer: AppFactory.init)
     c.register(NewRaceViewModelFactory.self) { r in
