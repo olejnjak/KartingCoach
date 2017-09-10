@@ -42,7 +42,6 @@ final class CircuitListViewController: BaseViewController {
         
         let tableView = UITableView()
         tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
