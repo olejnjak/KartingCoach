@@ -39,11 +39,11 @@ extension CircuitFlowController: CircuitListFlowDelegate {
     }
     
     func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController) {
-//        let newCircuitVM = NewCircuitViewModel(dependencies: dependencies)
-//        let newCircuitVC = NewCircuitViewController(viewModel: newCircuitVM)
-//        let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
-//        newCircuitVC.flowDelegate = self
-//        viewController.present(newCircuitNav, animated: true, completion: nil)
+        let newCircuitVM = container ~> NewCircuitViewModeling.self
+        let newCircuitVC = container ~> (NewCircuitViewController.self, argument: newCircuitVM)
+        let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
+        newCircuitVC.flowDelegate = self
+        viewController.present(newCircuitNav, animated: true, completion: nil)
     }
 }
 

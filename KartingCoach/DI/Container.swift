@@ -29,5 +29,9 @@ let container: Container = {
     }
     c.autoregister(CircuitDetailViewController.self, argument: CircuitDetailViewModeling.self, initializer: CircuitDetailViewController.init)
     
+    // New circuit
+    c.register(NewCircuitViewModeling.self) { r in NewCircuitViewModel(dependencies: r ~> AppDependency.self) }
+    c.autoregister(NewCircuitViewController.self, argument: NewCircuitViewModeling.self, initializer: NewCircuitViewController.init)
+    
     return c
 }()
