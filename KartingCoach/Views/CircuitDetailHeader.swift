@@ -6,20 +6,20 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 protocol CircuitDetailHeaderViewModeling {
-    var name: String { get }
-    var bestTime: LapTime? { get }
-    var averageTime: LapTime? { get }
+    var name: Property<String> { get }
+    var bestTime: Property<LapTime?> { get }
+    var averageTime: Property<LapTime?> { get }
 }
-
 
 final class CircuitDetailHeader: UIView {
     
     var circuit: CircuitDetailHeaderViewModeling? {
         didSet {
-            bestRow.timeLabel.text = circuit?.bestTime?.description ?? L10n.Basic.noTime
-            averageRow.timeLabel.text = circuit?.averageTime?.description ?? L10n.Basic.noTime
+            bestRow.timeLabel.text = circuit?.bestTime.value?.description ?? L10n.Basic.noTime
+            averageRow.timeLabel.text = circuit?.averageTime.value?.description ?? L10n.Basic.noTime
         }
     }
     

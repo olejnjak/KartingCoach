@@ -25,7 +25,7 @@ let container: Container = {
     
     // Circuit detail
     c.register(CircuitDetailViewModeling.self) { r, circuit in
-        CircuitDetailViewModel(circuit: circuit, dependencies: r ~> AppFactory.self)
+        CircuitDetailViewModel(circuit: circuit, factories: r ~> AppFactory.self, dependencies: r ~> AppDependency.self)
     }
     c.autoregister(CircuitDetailViewController.self, argument: CircuitDetailViewModeling.self, initializer: CircuitDetailViewController.init)
     
