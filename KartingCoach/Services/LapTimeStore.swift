@@ -17,6 +17,10 @@ protocol HasCircuitStore {
 
 final class LapTimeStore: CircuitStore {
     let circuits: Property<[Circuit]> = Property(value:[
-        Circuit(name: "Hořovice", races: [Race(date: Date(), lapTimes: [LapTime(duration: 55000)])])
+        Circuit(name: "Hořovice", races: [Race(date: Date(), lapTimes: [
+            LapTime(duration: 55001),
+            LapTime(duration: 56321)
+            ]
+            )])
         ])
 }

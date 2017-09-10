@@ -11,3 +11,4 @@ github "Alamofire/AlamofireNetworkActivityIndicator" ~> 2.2
 
 # UI
 github "SnapKit/SnapKit" ~> 3.2
+github "ViccAlexander/Chameleon" ~> 2.2

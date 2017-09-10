@@ -1,3 +1,10 @@
+"basic.no_time" = "---";
+
 "circuit_list.title" = "Circuits";
 
 "new_circuit.title" = "New circuit";
+
+"circuit_detail.average_time" = "Average:";
+"circuit_detail.best_time" = "Best:";
+
+"new_race.title" = "New race";
