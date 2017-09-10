@@ -6,6 +6,7 @@
 //
 
 import ReactiveSwift
+import enum Result.NoError
 
 typealias NewRaceViewModelFactory = (Circuit) -> NewRaceViewModeling
 
@@ -14,15 +15,24 @@ protocol HasNewRaceViewModelFactory {
 }
 
 protocol NewRaceViewModeling {
+    var items: MutableProperty<[LapTime]> { get }
     
+    func addNewLap()
 }
 
 final class NewRaceViewModel: NewRaceViewModeling {
+    
+    let items = MutableProperty<[LapTime]>([.zero])
     
     // MARK: Initializers
     
     init(circuit: Circuit) {
         
+    }
+    
+    func addNewLap() {
+        guard items.value.last != .zero else { return }
+        items.value = items.value + [.zero]
     }
     
 }
