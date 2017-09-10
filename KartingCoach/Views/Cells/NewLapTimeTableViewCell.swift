@@ -127,9 +127,9 @@ class NewLapTimeTableViewCell: UITableViewCell {
     
     private func updateValues() {
         guard lapTime != .zero else { return }
-        minutesTextField.text = lapTime?.minutes.description
-        secondsTextField.text = lapTime?.seconds.description
-        milisecondsTextField.text = lapTime?.miliseconds.description
+        minutesTextField.text = String(format: "%02d", lapTime?.minutes ?? 0)
+        secondsTextField.text = String(format: "%02d", lapTime?.seconds ?? 0)
+        milisecondsTextField.text = String(format: "%03d", lapTime?.miliseconds ?? 0)
     }
     
 }
