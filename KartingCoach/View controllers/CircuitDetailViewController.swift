@@ -33,11 +33,19 @@ final class CircuitDetailViewController: BaseViewController {
         let tableView = UITableView()
         tableView.tableHeaderView = createHeader()
         tableView.estimatedRowHeight = 60
+        tableView.allowsSelection = false
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         self.tableView = tableView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     // MARK: Private helpers
@@ -49,4 +57,42 @@ final class CircuitDetailViewController: BaseViewController {
         header.frame = CGRect(origin: .zero, size: header.systemLayoutSizeFitting(fittingSize))
         return header
     }
+}
+
+extension CircuitDetailViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.races.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.races[section].lapTimes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let lapTime = viewModel.races[indexPath.section].lapTimes[indexPath.row]
+        let cell: UITableViewCell & LapTimeCell
+        
+        if lapTime == viewModel.bestTime {
+            cell = tableView.dequeueCell(for: indexPath) as BestLapTimeTableViewCell
+        } else {
+            cell = tableView.dequeueCell(for: indexPath) as LapTimeTableViewCell
+        }
+        
+        cell.setLapTime(time: lapTime, lapNumber: indexPath.row + 1)
+        
+        return cell
+    }
+}
+
+extension CircuitDetailViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let race = viewModel.races[section]
+        let name = [race.name, Formatters.dateFormatter.string(from: race.date)]
+            .flatMap { $0 }
+            .joined(separator: " - ")
+        return name
+    }
+    
 }

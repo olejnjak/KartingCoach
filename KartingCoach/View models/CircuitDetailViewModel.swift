@@ -9,12 +9,14 @@ protocol CircuitDetailViewModeling: CircuitDetailHeaderViewModeling {
     var name: String { get }
     var bestTime: LapTime? { get }
     var averageTime: LapTime? { get }
+    var races: [Race] { get }
 }
 
 final class CircuitDetailViewModel: CircuitDetailViewModeling {
     let name: String
     let bestTime: LapTime?
     let averageTime: LapTime?
+    let races: [Race]
     
     // MARK: Initializers
     
@@ -22,6 +24,7 @@ final class CircuitDetailViewModel: CircuitDetailViewModeling {
         name = circuit.name
         bestTime = circuit.bestTime
         averageTime = circuit.averageTime
+        races = circuit.races
     }
     
 }
