@@ -7,6 +7,18 @@ import Foundation
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 enum L10n {
 
+  enum Basic {
+    /// ---
+    static let noTime = L10n.tr("Localizable", "basic.no_time")
+  }
+
+  enum CircuitDetail {
+    /// Average:
+    static let averageTime = L10n.tr("Localizable", "circuit_detail.average_time")
+    /// Best:
+    static let bestTime = L10n.tr("Localizable", "circuit_detail.best_time")
+  }
+
   enum CircuitList {
     /// Circuits
     static let title = L10n.tr("Localizable", "circuit_list.title")

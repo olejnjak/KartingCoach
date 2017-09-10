@@ -30,6 +30,7 @@
 		696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */; };
 		696FD68F1F649A0B00DDDFE5 /* NewCircuitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */; };
 		696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */; };
+		696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
 		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
 		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
@@ -88,6 +89,7 @@
 		696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircuitDetailViewController.swift; path = "KartingCoach/View controllers/CircuitDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCircuitViewModel.swift; path = "KartingCoach/View models/NewCircuitViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCircuitViewController.swift; path = "KartingCoach/View controllers/NewCircuitViewController.swift"; sourceTree = SOURCE_ROOT; };
+		696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailHeader.swift; sourceTree = "<group>"; };
 		699D03F41F37C13500FC9EB5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				69EFE6781F648CF90090740B /* Cells */,
+				696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */,
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
 				696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */,
 				696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */,
