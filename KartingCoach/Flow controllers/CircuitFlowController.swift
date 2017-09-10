@@ -32,10 +32,10 @@ final class CircuitFlowController: FlowController {
 extension CircuitFlowController: CircuitListFlowDelegate {
     
     func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit) {
-//        let detailVM = CircuitDetailViewModel(circuit: circuit, dependencies: dependencies)
-//        let detailVC = CircuitDetailViewController(viewModel: detailVM)
-//        detailVC.flowDelegate = self
-//        navigationController.pushViewController(detailVC, animated: true)
+        let detailVM = container ~> (CircuitDetailViewModeling.self, argument: circuit)
+        let detailVC = container ~> (CircuitDetailViewController.self, argument: detailVM)
+        detailVC.flowDelegate = self
+        navigationController.pushViewController(detailVC, animated: true)
     }
     
     func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController) {
