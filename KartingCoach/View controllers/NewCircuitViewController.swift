@@ -75,14 +75,7 @@ final class NewCircuitViewController: BaseViewController {
     // MARK: - Bindings
     
     private func setupBindings() {
-        viewModel.addCircuit.errors.observeValues { [weak self] in
-            switch $0 {
-            case .emptyName:
-                print("No empty name")
-            case .exists:
-                print("Circuit \(self?.textField?.text ?? "") already exists")
-            }
-        }
+        displayErrors(for: viewModel.addCircuit)
         
         viewModel.addCircuit.completed.observeValues { [weak self] in self?.flowDelegate?.newCircuitDidAdd(self!) }
     }

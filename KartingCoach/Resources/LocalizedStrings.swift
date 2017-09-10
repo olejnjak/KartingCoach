@@ -10,6 +10,8 @@ enum L10n {
   enum Basic {
     /// ---
     static let noTime = L10n.tr("Localizable", "basic.no_time")
+    /// OK
+    static let ok = L10n.tr("Localizable", "basic.ok")
   }
 
   enum CircuitDetail {

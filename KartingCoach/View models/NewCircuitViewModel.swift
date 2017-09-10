@@ -7,11 +7,6 @@
 
 import ReactiveSwift
 
-enum NewCircuitError: Error {
-    case emptyName
-    case exists
-}
-
 protocol NewCircuitViewModeling {
     var addCircuit: Action<String?, Circuit, NewCircuitError> { get }
 }
@@ -42,6 +37,8 @@ final class NewCircuitViewModel: NewCircuitViewModeling {
             sink.sendCompleted()
         }
     }
+    
+    // MARK: - Initialization
     
     init(dependencies: Dependencies) {
         self.circuitStore = dependencies.circuitStore
