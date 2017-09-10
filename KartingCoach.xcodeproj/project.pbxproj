@@ -63,6 +63,8 @@
 		69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6701F64886E0090740B /* CircuitListViewModel.swift */; };
 		69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */; };
 		69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6791F648D070090740B /* CircuitTableViewCell.swift */; };
+		A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */; };
+		A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC31F655F38008BCDFC /* Reusable.swift */; };
 		B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */; };
 		EE83C85A1EFE9066CF9E7F2E /* Pods_KartingCoachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */; };
 /* End PBXBuildFile section */
@@ -133,6 +135,8 @@
 		69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		69EFE6791F648D070090740B /* CircuitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitTableViewCell.swift; sourceTree = "<group>"; };
 		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		A3786DC31F655F38008BCDFC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF672FF604205F70C2F5B12C /* Pods-KartingCoach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.release.xcconfig"; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 		69BA3DF01F37B5D000CDC700 /* KartingCoach */ = {
 			isa = PBXGroup;
 			children = (
+				A3786DC21F655F30008BCDFC /* Protocols */,
 				69EFE6721F648A280090740B /* Extensions */,
 				69EFE6651F6484940090740B /* Services */,
 				69A2CD921F58C37A00E29590 /* Model */,
@@ -346,10 +351,19 @@
 		69EFE6781F648CF90090740B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */,
 				69EFE6791F648D070090740B /* CircuitTableViewCell.swift */,
 				696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A3786DC21F655F30008BCDFC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A3786DC31F655F38008BCDFC /* Reusable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +649,7 @@
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
 				69B2163A1F65471100047B7E /* NewRaceViewModel.swift in Sources */,
 				696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */,
+				A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */,
 				696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */,
 				696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */,
 				69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */,
@@ -648,6 +663,7 @@
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
 				69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */,
 				696FD68B1F64985900DDDFE5 /* CircuitDetailViewModel.swift in Sources */,
+				A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */,
 				69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */,
 				696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */,
 				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,

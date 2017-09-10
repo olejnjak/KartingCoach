@@ -38,7 +38,7 @@ extension CircuitFlowController: CircuitListFlowDelegate {
     }
     
     func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController) {
-        let newCircuitVM = NewCircuitViewModel()
+        let newCircuitVM = NewCircuitViewModel(dependencies: dependencies)
         let newCircuitVC = NewCircuitViewController(viewModel: newCircuitVM)
         let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
         newCircuitVC.flowDelegate = self
@@ -49,6 +49,10 @@ extension CircuitFlowController: CircuitListFlowDelegate {
 extension CircuitFlowController: NewCircuitFlowDelegate {
     
     func newCircuitDidCancel(_ viewController: NewCircuitViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func newCircuitDidAdd(_ viewController: NewCircuitViewController) {
         viewController.dismiss(animated: true, completion: nil)
     }
     

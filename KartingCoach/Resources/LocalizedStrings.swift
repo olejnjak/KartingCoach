@@ -25,6 +25,8 @@ enum L10n {
   }
 
   enum NewCircuit {
+    /// Circuit name
+    static let placeholder = L10n.tr("Localizable", "new_circuit.placeholder")
     /// New circuit
     static let title = L10n.tr("Localizable", "new_circuit.title")
   }

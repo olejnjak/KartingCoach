@@ -8,14 +8,14 @@
 import ReactiveSwift
 
 protocol CircuitListViewModeling {
-    var circuits: Property<[Circuit]> { get }
+    var circuits: MutableProperty<[Circuit]> { get }
 }
 
 final class CircuitListViewModel: CircuitListViewModeling {
     
     typealias Dependencies = HasCircuitStore
     
-    let circuits: Property<[Circuit]>
+    let circuits: MutableProperty<[Circuit]>
     
     // MARK: Initializers
     

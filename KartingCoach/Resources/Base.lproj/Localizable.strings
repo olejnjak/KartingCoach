@@ -3,6 +3,7 @@
 "circuit_list.title" = "Circuits";
 
 "new_circuit.title" = "New circuit";
+"new_circuit.placeholder" = "Circuit name";
 
 "circuit_detail.average_time" = "Average:";
 "circuit_detail.best_time" = "Best:";

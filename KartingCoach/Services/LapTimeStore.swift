@@ -8,7 +8,9 @@
 import ReactiveSwift
 
 protocol CircuitStore {
-    var circuits: Property<[Circuit]> { get }
+    var circuits: MutableProperty<[Circuit]> { get }
+    
+    func circuit(for name: String) -> Circuit?
 }
 
 protocol HasCircuitStore {
@@ -16,11 +18,16 @@ protocol HasCircuitStore {
 }
 
 final class LapTimeStore: CircuitStore {
-    let circuits: Property<[Circuit]> = Property(value:[
-        Circuit(name: "Hořovice", races: [Race(date: Date(), lapTimes: [
-            LapTime(duration: 55001),
-            LapTime(duration: 56321)
-            ]
-            )])
+    let circuits: MutableProperty<[Circuit]> = MutableProperty([
+        Circuit(name: "Hořovice", races: [
+            Race(date: Date(), lapTimes: [
+                LapTime(duration: 55001),
+                LapTime(duration: 56321)
+            ])
         ])
+    ])
+    
+    func circuit(for name: String) -> Circuit? {
+        return circuits.value.first(where: { $0.name == name })
+    }
 }
