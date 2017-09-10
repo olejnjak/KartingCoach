@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CircuitDetailFlowDelegate: class {
+    func circuitDetailDidTapAddRace(_ viewController: CircuitDetailViewController, circuitVM: CircuitDetailViewModeling)
+}
+
 final class CircuitDetailViewController: BaseViewController {
+    
+    weak var flowDelegate: CircuitDetailFlowDelegate?
     
     private weak var tableView: UITableView!
     
@@ -43,9 +49,18 @@ final class CircuitDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewRaceTapped))
         
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    // MARK: UI actions
+    
+    @objc
+    private func addNewRaceTapped() {
+        flowDelegate?.circuitDetailDidTapAddRace(self, circuitVM: viewModel)
     }
     
     // MARK: Private helpers

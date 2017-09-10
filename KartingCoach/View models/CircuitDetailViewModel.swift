@@ -10,21 +10,27 @@ protocol CircuitDetailViewModeling: CircuitDetailHeaderViewModeling {
     var bestTime: LapTime? { get }
     var averageTime: LapTime? { get }
     var races: [Race] { get }
+    
+    var newRaceVM: NewRaceViewModeling { get }
 }
 
 final class CircuitDetailViewModel: CircuitDetailViewModeling {
-    let name: String
-    let bestTime: LapTime?
-    let averageTime: LapTime?
-    let races: [Race]
+    typealias Dependencies = HasNewRaceViewModelFactory
+    
+    var name: String { return circuit.name }
+    var bestTime: LapTime? { return circuit.bestTime }
+    var averageTime: LapTime? { return circuit.averageTime }
+    var races: [Race] { return circuit.races }
+    
+    var newRaceVM: NewRaceViewModeling { return newRaceVMFactory(circuit) }
+    
+    private let circuit: Circuit
+    private let newRaceVMFactory: NewRaceViewModelFactory
     
     // MARK: Initializers
     
-    init(circuit: Circuit) {
-        name = circuit.name
-        bestTime = circuit.bestTime
-        averageTime = circuit.averageTime
-        races = circuit.races
+    init(circuit: Circuit, dependencies: Dependencies) {
+        self.circuit = circuit
+        self.newRaceVMFactory = dependencies.newRaceVMFactory
     }
-    
 }

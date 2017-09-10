@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct AppDependency: HasCircuitStore {
+struct AppDependency: HasCircuitStore, HasNewRaceViewModelFactory {
     
     let circuitStore: CircuitStore
+    let newRaceVMFactory: NewRaceViewModelFactory
     
 }
 
-let dependencies = AppDependency(circuitStore: LapTimeStore())
+let dependencies = AppDependency(circuitStore: LapTimeStore(), newRaceVMFactory: { NewRaceViewModel(circuit: $0) })

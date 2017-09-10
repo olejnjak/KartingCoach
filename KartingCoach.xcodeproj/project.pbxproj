@@ -50,6 +50,8 @@
 		69B2162F1F65395600047B7E /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B2162E1F65395600047B7E /* Formatters.swift */; };
 		69B216361F6540D000047B7E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B216351F6540D000047B7E /* Colors.swift */; };
 		69B216381F65448E00047B7E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B216371F65448E00047B7E /* Chameleon.framework */; };
+		69B2163A1F65471100047B7E /* NewRaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B216391F65471100047B7E /* NewRaceViewModel.swift */; };
+		69B2163C1F65475500047B7E /* NewRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B2163B1F65475500047B7E /* NewRaceViewController.swift */; };
 		69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */; };
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
@@ -113,6 +115,8 @@
 		69B2162E1F65395600047B7E /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		69B216351F6540D000047B7E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		69B216371F65448E00047B7E /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
+		69B216391F65471100047B7E /* NewRaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewModel.swift; sourceTree = "<group>"; };
+		69B2163B1F65475500047B7E /* NewRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewController.swift; sourceTree = "<group>"; };
 		69BA3DEE1F37B5D000CDC700 /* KartingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KartingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BA3DF81F37B5D000CDC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 				69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */,
 				696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */,
 				696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */,
+				69B2163B1F65475500047B7E /* NewRaceViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				69EFE6701F64886E0090740B /* CircuitListViewModel.swift */,
 				696FD68A1F64985900DDDFE5 /* CircuitDetailViewModel.swift */,
 				696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */,
+				69B216391F65471100047B7E /* NewRaceViewModel.swift */,
 			);
 			path = "View models";
 			sourceTree = "<group>";
@@ -625,7 +631,9 @@
 			files = (
 				696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */,
 				69B216361F6540D000047B7E /* Colors.swift in Sources */,
+				69B2163C1F65475500047B7E /* NewRaceViewController.swift in Sources */,
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
+				69B2163A1F65471100047B7E /* NewRaceViewModel.swift in Sources */,
 				696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */,
 				696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */,
 				696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */,

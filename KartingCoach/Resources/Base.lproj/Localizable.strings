@@ -6,3 +6,5 @@
 
 "circuit_detail.average_time" = "Average:";
 "circuit_detail.best_time" = "Best:";
+
+"new_race.title" = "New race";
