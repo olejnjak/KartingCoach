@@ -54,7 +54,7 @@ final class NewRaceViewController: BaseViewController {
         
         navigationItem.title = L10n.NewRace.title
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveBarButtonTapped(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: L10n.NewRace.save, style: .plain, target: self, action: #selector(saveBarButtonTapped(_:)))
         
         tableView.dataSource = self
         tableView.delegate = self
