@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwinjectAutoregistration
 
 final class CircuitFlowController: FlowController {
     var children = [FlowController]()
@@ -21,10 +22,10 @@ final class CircuitFlowController: FlowController {
     // MARK: Flow controller
     
     func start() {
-//        let circuitListVM = CircuitListViewModel(dependencies: dependencies)
-//        let circuitListVC = CircuitListViewController(viewModel: circuitListVM)
-//        circuitListVC.flowDelegate = self
-//        navigationController.viewControllers = [circuitListVC]
+        let circuitListVM = container ~> CircuitListViewModeling.self
+        let circuitListVC = container ~> (CircuitListViewController.self, argument: circuitListVM)
+        circuitListVC.flowDelegate = self
+        navigationController.viewControllers = [circuitListVC]
     }
 }
 

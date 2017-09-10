@@ -19,5 +19,9 @@ let container: Container = {
         return { NewRaceViewModel(circuit: $0, dependencies: r ~> AppDependency.self) }
     }
     
+    // Circuit list
+    c.register(CircuitListViewModeling.self) { r in CircuitListViewModel(dependencies: r ~> AppDependency.self) }
+    c.autoregister(CircuitListViewController.self, argument: CircuitListViewModeling.self, initializer: CircuitListViewController.init)
+    
     return c
 }()

@@ -65,6 +65,8 @@
 		69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6791F648D070090740B /* CircuitTableViewCell.swift */; };
 		A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */; };
 		A32475621F65BF9A00263D04 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32475611F65BF9A00263D04 /* Container.swift */; };
+		A32475671F65C5E000263D04 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475651F65C5E000263D04 /* Swinject.framework */; };
+		A32475681F65C60000263D04 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */; };
 		A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC31F655F38008BCDFC /* Reusable.swift */; };
 		A3786DC61F657118008BCDFC /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC51F657118008BCDFC /* ErrorPresentable.swift */; };
@@ -142,6 +144,8 @@
 		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLapTimeTableViewCell.swift; sourceTree = "<group>"; };
 		A32475611F65BF9A00263D04 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		A32475651F65C5E000263D04 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		A3786DC31F655F38008BCDFC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A3786DC51F657118008BCDFC /* ErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresentable.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32475681F65C60000263D04 /* SwinjectAutoregistration.framework in Frameworks */,
+				A32475671F65C5E000263D04 /* Swinject.framework in Frameworks */,
 				69B216381F65448E00047B7E /* Chameleon.framework in Frameworks */,
 				699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */,
 				699D040B1F37CAD400FC9EB5 /* Result.framework in Frameworks */,
@@ -195,6 +201,8 @@
 		5DF8F5BFD31C194FE0920308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A32475651F65C5E000263D04 /* Swinject.framework */,
+				A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */,
 				69B216371F65448E00047B7E /* Chameleon.framework */,
 				699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */,
 				699D04091F37CAD400FC9EB5 /* ReactiveSwift.framework */,
@@ -633,6 +641,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 			);
 			name = "Carthage stuff";
 			outputPaths = (
@@ -645,6 +655,8 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Chameleon.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
