@@ -32,6 +32,7 @@ final class CircuitDetailViewController: BaseViewController {
         
         let tableView = UITableView()
         tableView.tableHeaderView = createHeader()
+        tableView.estimatedRowHeight = 60
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()

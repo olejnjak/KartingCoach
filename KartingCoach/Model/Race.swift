@@ -9,6 +9,7 @@ import Foundation
 
 struct Race {
     let date: Date
+    let name: String?
     let lapTimes: [LapTime]
     
     var bestTime: LapTime? {
@@ -17,5 +18,11 @@ struct Race {
     
     var averageTime: LapTime? {
         return lapTimes.average()
+    }
+}
+
+extension Race {
+    init(date: Date, lapTimes: [LapTime]) {
+        self.init(date: date, name: nil, lapTimes: lapTimes)
     }
 }

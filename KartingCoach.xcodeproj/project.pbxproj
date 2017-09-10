@@ -31,6 +31,7 @@
 		696FD68F1F649A0B00DDDFE5 /* NewCircuitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */; };
 		696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */; };
 		696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */; };
+		696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
 		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
 		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
@@ -90,6 +91,7 @@
 		696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCircuitViewModel.swift; path = "KartingCoach/View models/NewCircuitViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCircuitViewController.swift; path = "KartingCoach/View controllers/NewCircuitViewController.swift"; sourceTree = SOURCE_ROOT; };
 		696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailHeader.swift; sourceTree = "<group>"; };
+		696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTableViewCell.swift; sourceTree = "<group>"; };
 		699D03F41F37C13500FC9EB5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				69EFE6791F648D070090740B /* CircuitTableViewCell.swift */,
+				696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */,
 				696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */,
 				69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */,
+				696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */,
 				69A2CD9C1F58C92100E29590 /* Race.swift in Sources */,
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
 				69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */,
