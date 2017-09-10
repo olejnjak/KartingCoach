@@ -10,9 +10,8 @@ import UIKit
 extension UITableView {
     
     func dequeueCell<Cell: UITableViewCell>(for indexPath: IndexPath) -> Cell {
-        let cellIdentifier = NSStringFromClass(Cell.self)
-        register(Cell.self, forCellReuseIdentifier: cellIdentifier)
-        return dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! Cell
+        register(Cell.self, forCellReuseIdentifier: Cell.reuseIdentifier)
+        return dequeueReusableCell(withIdentifier: Cell.reuseIdentifier, for: indexPath) as! Cell
     }
     
 }

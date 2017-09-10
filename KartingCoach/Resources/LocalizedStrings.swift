@@ -10,6 +10,8 @@ enum L10n {
   enum Basic {
     /// ---
     static let noTime = L10n.tr("Localizable", "basic.no_time")
+    /// OK
+    static let ok = L10n.tr("Localizable", "basic.ok")
   }
 
   enum CircuitDetail {
@@ -25,11 +27,30 @@ enum L10n {
   }
 
   enum NewCircuit {
+    /// Circuit name
+    static let placeholder = L10n.tr("Localizable", "new_circuit.placeholder")
     /// New circuit
     static let title = L10n.tr("Localizable", "new_circuit.title")
+
+    enum Errors {
+
+      enum EmptyName {
+        /// Name cannot be empty
+        static let title = L10n.tr("Localizable", "new_circuit.errors.empty_name.title")
+      }
+
+      enum Exists {
+        /// Name already exists
+        static let title = L10n.tr("Localizable", "new_circuit.errors.exists.title")
+      }
+    }
   }
 
   enum NewRace {
+    /// Add new lap
+    static let add = L10n.tr("Localizable", "new_race.add")
+    /// Save
+    static let save = L10n.tr("Localizable", "new_race.save")
     /// New race
     static let title = L10n.tr("Localizable", "new_race.title")
   }

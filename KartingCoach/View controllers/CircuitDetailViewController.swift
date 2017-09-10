@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 protocol CircuitDetailFlowDelegate: class {
     func circuitDetailDidTapAddRace(_ viewController: CircuitDetailViewController, circuitVM: CircuitDetailViewModeling)
@@ -23,8 +24,8 @@ final class CircuitDetailViewController: BaseViewController {
     
     init(viewModel: CircuitDetailViewModeling) {
         self.viewModel = viewModel
+        
         super.init()
-        title = viewModel.name
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,11 +50,13 @@ final class CircuitDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewRaceTapped))
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        setupBindings()
     }
     
     // MARK: UI actions
@@ -61,6 +64,14 @@ final class CircuitDetailViewController: BaseViewController {
     @objc
     private func addNewRaceTapped() {
         flowDelegate?.circuitDetailDidTapAddRace(self, circuitVM: viewModel)
+    }
+    
+    // MARK: - Bindings
+    
+    private func setupBindings() {
+        navigationItem.reactive.title <~ viewModel.name
+        
+        tableView.reactive.reloadData <~ viewModel.races.producer.map { _ in }
     }
     
     // MARK: Private helpers
@@ -77,18 +88,18 @@ final class CircuitDetailViewController: BaseViewController {
 extension CircuitDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.races.count
+        return viewModel.races.value.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.races[section].lapTimes.count
+        return viewModel.races.value[section].lapTimes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let lapTime = viewModel.races[indexPath.section].lapTimes[indexPath.row]
+        let lapTime = viewModel.races.value[indexPath.section].lapTimes[indexPath.row]
         let cell: LapTimeTableViewCell = tableView.dequeueCell(for: indexPath)
         cell.setLapTime(time: lapTime, lapNumber: indexPath.row + 1)
-        cell.contentView.backgroundColor = lapTime == viewModel.bestTime ? .bestTime : nil
+        cell.contentView.backgroundColor = lapTime == viewModel.bestTime.value ? .bestTime : nil
         return cell
     }
 }
@@ -96,7 +107,7 @@ extension CircuitDetailViewController: UITableViewDataSource {
 extension CircuitDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let race = viewModel.races[section]
+        let race = viewModel.races.value[section]
         let name = [race.name, Formatters.dateFormatter.string(from: race.date)]
             .flatMap { $0 }
             .joined(separator: " - ")

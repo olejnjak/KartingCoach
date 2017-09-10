@@ -63,6 +63,15 @@
 		69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6701F64886E0090740B /* CircuitListViewModel.swift */; };
 		69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */; };
 		69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6791F648D070090740B /* CircuitTableViewCell.swift */; };
+		A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */; };
+		A32475621F65BF9A00263D04 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32475611F65BF9A00263D04 /* Container.swift */; };
+		A32475671F65C5E000263D04 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475651F65C5E000263D04 /* Swinject.framework */; };
+		A32475681F65C60000263D04 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */; };
+		A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC31F655F38008BCDFC /* Reusable.swift */; };
+		A3786DC61F657118008BCDFC /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC51F657118008BCDFC /* ErrorPresentable.swift */; };
+		A3786DC91F6571B2008BCDFC /* DisplayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC81F6571B2008BCDFC /* DisplayableError.swift */; };
+		A3786DCB1F6571D0008BCDFC /* NewCircuitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */; };
 		B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */; };
 		EE83C85A1EFE9066CF9E7F2E /* Pods_KartingCoachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */; };
 /* End PBXBuildFile section */
@@ -133,6 +142,15 @@
 		69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		69EFE6791F648D070090740B /* CircuitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitTableViewCell.swift; sourceTree = "<group>"; };
 		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLapTimeTableViewCell.swift; sourceTree = "<group>"; };
+		A32475611F65BF9A00263D04 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		A32475651F65C5E000263D04 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		A3786DC31F655F38008BCDFC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		A3786DC51F657118008BCDFC /* ErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresentable.swift; sourceTree = "<group>"; };
+		A3786DC81F6571B2008BCDFC /* DisplayableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableError.swift; sourceTree = "<group>"; };
+		A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCircuitError.swift; sourceTree = "<group>"; };
 		A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF672FF604205F70C2F5B12C /* Pods-KartingCoach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +161,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32475681F65C60000263D04 /* SwinjectAutoregistration.framework in Frameworks */,
+				A32475671F65C5E000263D04 /* Swinject.framework in Frameworks */,
 				69B216381F65448E00047B7E /* Chameleon.framework in Frameworks */,
 				699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */,
 				699D040B1F37CAD400FC9EB5 /* Result.framework in Frameworks */,
@@ -181,6 +201,8 @@
 		5DF8F5BFD31C194FE0920308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A32475651F65C5E000263D04 /* Swinject.framework */,
+				A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */,
 				69B216371F65448E00047B7E /* Chameleon.framework */,
 				699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */,
 				699D04091F37CAD400FC9EB5 /* ReactiveSwift.framework */,
@@ -274,6 +296,9 @@
 		69BA3DF01F37B5D000CDC700 /* KartingCoach */ = {
 			isa = PBXGroup;
 			children = (
+				A32475631F65BFA100263D04 /* DI */,
+				A3786DC71F6571A8008BCDFC /* Errors */,
+				A3786DC21F655F30008BCDFC /* Protocols */,
 				69EFE6721F648A280090740B /* Extensions */,
 				69EFE6651F6484940090740B /* Services */,
 				69A2CD921F58C37A00E29590 /* Model */,
@@ -346,10 +371,38 @@
 		69EFE6781F648CF90090740B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */,
+				A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */,
 				69EFE6791F648D070090740B /* CircuitTableViewCell.swift */,
 				696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A32475631F65BFA100263D04 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A32475611F65BF9A00263D04 /* Container.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A3786DC21F655F30008BCDFC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A3786DC81F6571B2008BCDFC /* DisplayableError.swift */,
+				A3786DC51F657118008BCDFC /* ErrorPresentable.swift */,
+				A3786DC31F655F38008BCDFC /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A3786DC71F6571A8008BCDFC /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +466,7 @@
 					};
 					69BA3DED1F37B5D000CDC700 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
 					};
 					69BA3E011F37B5D000CDC700 = {
 						CreatedOnToolsVersion = 9.0;
@@ -587,6 +641,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 			);
 			name = "Carthage stuff";
 			outputPaths = (
@@ -599,6 +655,8 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Chameleon.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -635,8 +693,10 @@
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
 				69B2163A1F65471100047B7E /* NewRaceViewModel.swift in Sources */,
 				696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */,
+				A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */,
 				696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */,
 				696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */,
+				A3786DCB1F6571D0008BCDFC /* NewCircuitError.swift in Sources */,
 				69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */,
 				696FD68F1F649A0B00DDDFE5 /* NewCircuitViewModel.swift in Sources */,
 				69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */,
@@ -644,16 +704,21 @@
 				696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */,
 				69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */,
 				696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */,
+				A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */,
 				69A2CD9C1F58C92100E29590 /* Race.swift in Sources */,
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
 				69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */,
 				696FD68B1F64985900DDDFE5 /* CircuitDetailViewModel.swift in Sources */,
+				A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */,
+				A3786DC91F6571B2008BCDFC /* DisplayableError.swift in Sources */,
 				69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */,
+				A3786DC61F657118008BCDFC /* ErrorPresentable.swift in Sources */,
 				696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */,
 				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,
 				69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */,
 				69EFE6691F6486E40090740B /* AppDependency.swift in Sources */,
 				69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */,
+				A32475621F65BF9A00263D04 /* Container.swift in Sources */,
 				69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,9 +886,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = MS5H3BD7U5;
+				DEVELOPMENT_TEAM = PXDF48X6VX;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -849,8 +915,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = cz.olejnjak.timecoach.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.kartingCoach.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8b8cbc82-28d4-4298-8766-bd18ee2ed57b";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development cz.ackee.enterprise.*";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -891,9 +959,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = MS5H3BD7U5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -912,8 +981,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = cz.olejnjak.timecoach;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.kartingCoach.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;

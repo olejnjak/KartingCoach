@@ -19,3 +19,9 @@ struct Circuit {
         return races.flatMap { $0.averageTime }.average()
     }
 }
+
+extension Circuit: Equatable { }
+
+func == (lhs: Circuit, rhs: Circuit) -> Bool {
+    return lhs.name == rhs.name
+}

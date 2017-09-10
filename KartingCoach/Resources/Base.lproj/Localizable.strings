@@ -1,10 +1,16 @@
 "basic.no_time" = "---";
+"basic.ok" = "OK";
 
 "circuit_list.title" = "Circuits";
 
 "new_circuit.title" = "New circuit";
+"new_circuit.placeholder" = "Circuit name";
+"new_circuit.errors.empty_name.title" = "Name cannot be empty";
+"new_circuit.errors.exists.title" = "Name already exists";
 
 "circuit_detail.average_time" = "Average:";
 "circuit_detail.best_time" = "Best:";
 
 "new_race.title" = "New race";
+"new_race.add" = "Add new lap";
+"new_race.save" = "Save";

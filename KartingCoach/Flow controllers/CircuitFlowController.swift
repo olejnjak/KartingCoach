@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwinjectAutoregistration
 
 final class CircuitFlowController: FlowController {
     var children = [FlowController]()
@@ -21,8 +22,8 @@ final class CircuitFlowController: FlowController {
     // MARK: Flow controller
     
     func start() {
-        let circuitListVM = CircuitListViewModel(dependencies: dependencies)
-        let circuitListVC = CircuitListViewController(viewModel: circuitListVM)
+        let circuitListVM = container ~> CircuitListViewModeling.self
+        let circuitListVC = container ~> (CircuitListViewController.self, argument: circuitListVM)
         circuitListVC.flowDelegate = self
         navigationController.viewControllers = [circuitListVC]
     }
@@ -31,15 +32,15 @@ final class CircuitFlowController: FlowController {
 extension CircuitFlowController: CircuitListFlowDelegate {
     
     func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit) {
-        let detailVM = CircuitDetailViewModel(circuit: circuit, dependencies: dependencies)
-        let detailVC = CircuitDetailViewController(viewModel: detailVM)
+        let detailVM = container ~> (CircuitDetailViewModeling.self, argument: circuit)
+        let detailVC = container ~> (CircuitDetailViewController.self, argument: detailVM)
         detailVC.flowDelegate = self
         navigationController.pushViewController(detailVC, animated: true)
     }
     
     func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController) {
-        let newCircuitVM = NewCircuitViewModel()
-        let newCircuitVC = NewCircuitViewController(viewModel: newCircuitVM)
+        let newCircuitVM = container ~> NewCircuitViewModeling.self
+        let newCircuitVC = container ~> (NewCircuitViewController.self, argument: newCircuitVM)
         let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
         newCircuitVC.flowDelegate = self
         viewController.present(newCircuitNav, animated: true, completion: nil)
@@ -49,6 +50,10 @@ extension CircuitFlowController: CircuitListFlowDelegate {
 extension CircuitFlowController: NewCircuitFlowDelegate {
     
     func newCircuitDidCancel(_ viewController: NewCircuitViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func newCircuitDidAdd(_ viewController: NewCircuitViewController) {
         viewController.dismiss(animated: true, completion: nil)
     }
     
@@ -68,6 +73,10 @@ extension CircuitFlowController: CircuitDetailFlowDelegate {
 extension CircuitFlowController: NewRaceFlowDelegate {
     
     func newRaceDidCancel(_ viewController: NewRaceViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func newRaceDidSave(_ viewController: NewRaceViewController) {
         viewController.dismiss(animated: true, completion: nil)
     }
     

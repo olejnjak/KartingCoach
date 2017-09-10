@@ -6,6 +6,7 @@
 //
 
 import ReactiveSwift
+import enum Result.NoError
 
 typealias NewRaceViewModelFactory = (Circuit) -> NewRaceViewModeling
 
@@ -14,15 +15,41 @@ protocol HasNewRaceViewModelFactory {
 }
 
 protocol NewRaceViewModeling {
+    var items: MutableProperty<[LapTime]> { get }
     
+    func addNewLap()
+    func save()
 }
 
 final class NewRaceViewModel: NewRaceViewModeling {
+    typealias Dependencies = HasCircuitStore
+    
+    private let circuit: Circuit
+    private let dependencies: Dependencies
+    
+    let items = MutableProperty<[LapTime]>([.zero])
     
     // MARK: Initializers
+    init(circuit: Circuit, dependencies: Dependencies) {
+        self.circuit = circuit
+        self.dependencies = dependencies
+    }
     
-    init(circuit: Circuit) {
-        
+    func addNewLap() {
+        guard items.value.last != .zero else { return }
+        items.value = items.value + [.zero]
+    }
+    
+    func save() {
+        let race = Race(date: Date(), lapTimes: items.value.filter { $0 != .zero })
+        let races: [Race] = self.circuit.races + [race]
+        let circuit = Circuit(name: self.circuit.name, races: races)
+        var currentCircuits = dependencies.circuitStore.circuits.value
+        currentCircuits.enumerated().forEach { index, element in
+            guard element == circuit else { return }
+            currentCircuits[index] = circuit
+        }
+        dependencies.circuitStore.circuits.value = currentCircuits
     }
     
 }
