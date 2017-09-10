@@ -8,6 +8,7 @@
 import UIKit
 
 final class AppFlowController: FlowController {
+    var children = [FlowController]()
     
     private var window: UIWindow
     
@@ -20,7 +21,11 @@ final class AppFlowController: FlowController {
     // MARK: Flow controller
     
     func start() {
-        window.rootViewController = ViewController()
+        let circuitNav = UINavigationController()
+        let circuitFlow = CircuitFlowController(navigationController: circuitNav)
+        
+        add(child: circuitFlow)
+        
+        window.rootViewController = circuitNav
     }
-    
 }
