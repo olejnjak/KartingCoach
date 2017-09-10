@@ -17,9 +17,9 @@ extension NewCircuitError: DisplayableError {
     var title: String? {
         switch self {
         case .emptyName:
-            return "Name cannot be empty"
+            return L10n.NewCircuit.Errors.EmptyName.title
         case .exists:
-            return "Name already exists"
+            return L10n.NewCircuit.Errors.Exists.title
         }
     }
     

@@ -31,6 +31,19 @@ enum L10n {
     static let placeholder = L10n.tr("Localizable", "new_circuit.placeholder")
     /// New circuit
     static let title = L10n.tr("Localizable", "new_circuit.title")
+
+    enum Errors {
+
+      enum EmptyName {
+        /// Name cannot be empty
+        static let title = L10n.tr("Localizable", "new_circuit.errors.empty_name.title")
+      }
+
+      enum Exists {
+        /// Name already exists
+        static let title = L10n.tr("Localizable", "new_circuit.errors.exists.title")
+      }
+    }
   }
 
   enum NewRace {
