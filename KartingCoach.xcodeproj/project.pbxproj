@@ -64,6 +64,7 @@
 		69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */; };
 		69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6791F648D070090740B /* CircuitTableViewCell.swift */; };
 		A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */; };
+		A32475621F65BF9A00263D04 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32475611F65BF9A00263D04 /* Container.swift */; };
 		A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */; };
 		A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC31F655F38008BCDFC /* Reusable.swift */; };
 		A3786DC61F657118008BCDFC /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC51F657118008BCDFC /* ErrorPresentable.swift */; };
@@ -140,6 +141,7 @@
 		69EFE6791F648D070090740B /* CircuitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitTableViewCell.swift; sourceTree = "<group>"; };
 		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLapTimeTableViewCell.swift; sourceTree = "<group>"; };
+		A32475611F65BF9A00263D04 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		A3786DC31F655F38008BCDFC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A3786DC51F657118008BCDFC /* ErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresentable.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		69BA3DF01F37B5D000CDC700 /* KartingCoach */ = {
 			isa = PBXGroup;
 			children = (
+				A32475631F65BFA100263D04 /* DI */,
 				A3786DC71F6571A8008BCDFC /* Errors */,
 				A3786DC21F655F30008BCDFC /* Protocols */,
 				69EFE6721F648A280090740B /* Extensions */,
@@ -366,6 +369,14 @@
 				696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A32475631F65BFA100263D04 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A32475611F65BF9A00263D04 /* Container.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		A3786DC21F655F30008BCDFC /* Protocols */ = {
@@ -695,6 +706,7 @@
 				69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */,
 				69EFE6691F6486E40090740B /* AppDependency.swift in Sources */,
 				69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */,
+				A32475621F65BF9A00263D04 /* Container.swift in Sources */,
 				69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

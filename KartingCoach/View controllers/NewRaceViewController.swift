@@ -10,6 +10,7 @@ import ReactiveSwift
 
 protocol NewRaceFlowDelegate: class {
     func newRaceDidCancel(_ viewController: NewRaceViewController)
+    func newRaceDidSave(_ viewController: NewRaceViewController)
 }
 
 final class NewRaceViewController: BaseViewController {
@@ -53,6 +54,7 @@ final class NewRaceViewController: BaseViewController {
         
         navigationItem.title = L10n.NewRace.title
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveBarButtonTapped(_:)))
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -65,6 +67,12 @@ final class NewRaceViewController: BaseViewController {
     @objc
     private func cancelTapped() {
         flowDelegate?.newRaceDidCancel(self)
+    }
+    
+    @objc
+    private func saveBarButtonTapped(_ sender: UIBarButtonItem) {
+        viewModel.save()
+        flowDelegate?.newRaceDidSave(self)
     }
     
     // MARK: - Bindings

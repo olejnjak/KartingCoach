@@ -21,28 +21,28 @@ final class CircuitFlowController: FlowController {
     // MARK: Flow controller
     
     func start() {
-        let circuitListVM = CircuitListViewModel(dependencies: dependencies)
-        let circuitListVC = CircuitListViewController(viewModel: circuitListVM)
-        circuitListVC.flowDelegate = self
-        navigationController.viewControllers = [circuitListVC]
+//        let circuitListVM = CircuitListViewModel(dependencies: dependencies)
+//        let circuitListVC = CircuitListViewController(viewModel: circuitListVM)
+//        circuitListVC.flowDelegate = self
+//        navigationController.viewControllers = [circuitListVC]
     }
 }
 
 extension CircuitFlowController: CircuitListFlowDelegate {
     
     func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit) {
-        let detailVM = CircuitDetailViewModel(circuit: circuit, dependencies: dependencies)
-        let detailVC = CircuitDetailViewController(viewModel: detailVM)
-        detailVC.flowDelegate = self
-        navigationController.pushViewController(detailVC, animated: true)
+//        let detailVM = CircuitDetailViewModel(circuit: circuit, dependencies: dependencies)
+//        let detailVC = CircuitDetailViewController(viewModel: detailVM)
+//        detailVC.flowDelegate = self
+//        navigationController.pushViewController(detailVC, animated: true)
     }
     
     func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController) {
-        let newCircuitVM = NewCircuitViewModel(dependencies: dependencies)
-        let newCircuitVC = NewCircuitViewController(viewModel: newCircuitVM)
-        let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
-        newCircuitVC.flowDelegate = self
-        viewController.present(newCircuitNav, animated: true, completion: nil)
+//        let newCircuitVM = NewCircuitViewModel(dependencies: dependencies)
+//        let newCircuitVC = NewCircuitViewController(viewModel: newCircuitVM)
+//        let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
+//        newCircuitVC.flowDelegate = self
+//        viewController.present(newCircuitNav, animated: true, completion: nil)
     }
 }
 
@@ -72,6 +72,10 @@ extension CircuitFlowController: CircuitDetailFlowDelegate {
 extension CircuitFlowController: NewRaceFlowDelegate {
     
     func newRaceDidCancel(_ viewController: NewRaceViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func newRaceDidSave(_ viewController: NewRaceViewController) {
         viewController.dismiss(animated: true, completion: nil)
     }
     
