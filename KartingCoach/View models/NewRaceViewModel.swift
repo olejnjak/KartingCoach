@@ -49,6 +49,7 @@ final class NewRaceViewModel: NewRaceViewModeling {
             guard element == circuit else { return }
             currentCircuits[index] = circuit
         }
+        dependencies.circuitStore.circuits.value = currentCircuits
     }
     
 }

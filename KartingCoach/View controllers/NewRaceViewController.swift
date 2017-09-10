@@ -71,6 +71,7 @@ final class NewRaceViewController: BaseViewController {
     
     @objc
     private func saveBarButtonTapped(_ sender: UIBarButtonItem) {
+        updateLapTimes()
         viewModel.save()
         flowDelegate?.newRaceDidSave(self)
     }
