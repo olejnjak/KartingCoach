@@ -68,15 +68,23 @@ final class NewCircuitViewController: BaseViewController {
         setupBindings()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        textField?.becomeFirstResponder()
+    }
+    
     // MARK: UI actions
     
     @objc
     private func cancelTapped() {
+        view.endEditing(true)
         flowDelegate?.newCircuitDidCancel(self)
     }
     
     @objc
     private func doneBarButtonTapped(_ sender: UIBarButtonItem) {
+        view.endEditing(true)
         viewModel.addCircuit.apply().start()
     }
     
