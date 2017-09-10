@@ -106,7 +106,7 @@ extension NewRaceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == viewModel.items.value.count {
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Add new lap"
+            cell.textLabel?.text = L10n.NewRace.add
             
             return cell
         } else {
@@ -127,6 +127,5 @@ extension NewRaceViewController: UITableViewDelegate {
         updateLapTimes()
         viewModel.addNewLap()
     }
-    
     
 }

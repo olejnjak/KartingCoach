@@ -47,6 +47,8 @@ enum L10n {
   }
 
   enum NewRace {
+    /// Add new lap
+    static let add = L10n.tr("Localizable", "new_race.add")
     /// New race
     static let title = L10n.tr("Localizable", "new_race.title")
   }
