@@ -17,6 +17,7 @@ final class CircuitDetailViewController: BaseViewController {
     weak var flowDelegate: CircuitDetailFlowDelegate?
     
     private weak var tableView: UITableView!
+    private weak var tableHeader: CircuitDetailHeader!
     
     private let viewModel: CircuitDetailViewModeling
     
@@ -38,7 +39,8 @@ final class CircuitDetailViewController: BaseViewController {
         super.loadView()
         
         let tableView = UITableView()
-        tableView.tableHeaderView = createHeader()
+        let tableHeader = createHeader()
+        tableView.tableHeaderView = tableHeader
         tableView.estimatedRowHeight = 60
         tableView.allowsSelection = false
         view.addSubview(tableView)
@@ -46,6 +48,7 @@ final class CircuitDetailViewController: BaseViewController {
             make.edges.equalToSuperview()
         }
         self.tableView = tableView
+        self.tableHeader = tableHeader
     }
     
     override func viewDidLoad() {
@@ -72,6 +75,7 @@ final class CircuitDetailViewController: BaseViewController {
         navigationItem.reactive.title <~ viewModel.name
         
         tableView.reactive.reloadData <~ viewModel.races.producer.map { _ in }
+        tableHeader.reactive.refresh <~ viewModel.races.producer.map { _ in }
     }
     
     // MARK: Private helpers
