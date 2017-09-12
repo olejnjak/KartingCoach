@@ -93,8 +93,4 @@ extension CircuitListViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         flowDelegate?.circuitList(self, didSelect: viewModel.circuits.value[indexPath.row])
     }
-    
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return viewModel.circuits.value[indexPath.row].bestTime != nil
-    }
 }
