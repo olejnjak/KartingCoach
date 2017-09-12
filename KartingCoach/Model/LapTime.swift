@@ -11,7 +11,7 @@ struct LapTime: Codable {
     static var zero: LapTime { return LapTime(duration: 0) }
     
     var minutes: Int { return duration / 1000 / 60 }
-    var seconds: Int { return duration / 1000 }
+    var seconds: Int { return duration / 1000 % 60 }
     var miliseconds: Int { return duration % 1000 }
     
     let duration: Int
