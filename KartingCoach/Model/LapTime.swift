@@ -25,8 +25,7 @@ extension LapTime {
 
 extension LapTime: CustomStringConvertible {
     var description: String {
-        let decimalSeparator = Locale.current.decimalSeparator ?? "."
-        let secondsAndMiliseconds = String(seconds) + decimalSeparator + String(format: "%03d", miliseconds)
+        let secondsAndMiliseconds = String(format: "%02d", seconds) + "." + String(format: "%03d", miliseconds)
         return minutes > 0 ? String(minutes) + ":" + secondsAndMiliseconds : secondsAndMiliseconds
     }
 }
