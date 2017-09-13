@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Circuit {
+struct Circuit: Codable {
     let name: String
     let races: [Race]
     
@@ -20,8 +20,8 @@ struct Circuit {
     }
 }
 
-extension Circuit: Equatable { }
-
-func == (lhs: Circuit, rhs: Circuit) -> Bool {
-    return lhs.name == rhs.name
+extension Circuit: Equatable {
+    static func == (lhs: Circuit, rhs: Circuit) -> Bool {
+        return lhs.name == rhs.name
+    }
 }

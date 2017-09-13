@@ -11,11 +11,8 @@ final class CircuitTableViewCell: UITableViewCell {
     
     var circuit: Circuit? {
         didSet {
-            let bestTime = circuit?.bestTime
-            
             textLabel?.text = circuit?.name
-            detailTextLabel?.text = bestTime?.description
-            accessoryType = bestTime.map { _ in .disclosureIndicator } ?? .none
+            detailTextLabel?.text = circuit?.bestTime?.description
         }
     }
     
@@ -23,10 +20,10 @@ final class CircuitTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        accessoryType = .disclosureIndicator
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

@@ -7,32 +7,19 @@
 
 import Foundation
 
-struct LapTime {
+struct LapTime: Codable {
     static var zero: LapTime { return LapTime(duration: 0) }
     
-    let minutes: Int
-    let seconds: Int
-    let miliseconds: Int
+    var minutes: Int { return duration / 1000 / 60 }
+    var seconds: Int { return duration / 1000 % 60 }
+    var miliseconds: Int { return duration % 1000 }
     
-    var duration: Int {
-        return miliseconds + seconds * 1000 + minutes * 60 * 1000
-    }
-
+    let duration: Int
 }
 
 extension LapTime {
-
-    /**
-     * Initialize new lap time
-     *
-     * - parameter duration: Duration of lap time in miliseconds
-     */
-    init(duration: Int) {
-        assert(duration >= 0, "Duration has to be greater than or equal to 0")
-        
-        minutes = duration / 1000 / 60
-        seconds = duration / 1000 % 60
-        miliseconds = duration % 1000
+    init(minutes: Int, seconds: Int, miliseconds: Int) {
+        self.init(duration: minutes * 60 * 1000 + seconds * 1000 + miliseconds)
     }
 }
 
@@ -74,3 +61,4 @@ extension Collection where Iterator.Element == LapTime {
         return reduce(.zero, +) / Int(count)
     }
 }
+

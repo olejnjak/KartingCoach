@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Race {
+struct Race: Codable {
     let date: Date
     let name: String?
     let lapTimes: [LapTime]

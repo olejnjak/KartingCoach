@@ -97,3 +97,9 @@ private final class CircuitDetailHeaderRow: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+extension Reactive where Base: CircuitDetailHeader {
+    var refresh: BindingTarget<Void> {
+        return makeBindingTarget { base, _ in base.circuit = base.circuit }
+    }
+}
