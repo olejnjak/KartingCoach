@@ -7,6 +7,7 @@
 
 import UIKit
 import SwinjectAutoregistration
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         setupAppearance()
+        
+        IQKeyboardManager.sharedManager().enable = true
+        
+        
         appFlow.start()
         return true
     }
