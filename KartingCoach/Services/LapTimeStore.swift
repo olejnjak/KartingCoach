@@ -11,6 +11,7 @@ protocol CircuitStore {
     var circuits: MutableProperty<[Circuit]> { get }
     
     func circuit(for name: String) -> Circuit?
+    func `import`(from url: URL) -> Bool
 }
 
 protocol HasCircuitStore {
@@ -20,11 +21,12 @@ protocol HasCircuitStore {
 final class LapTimeStore: CircuitStore {
     let circuits: MutableProperty<[Circuit]>
     
-    private let dataFile: URL = {
+    private let docsURL: URL = {
         let fm = FileManager.default
-        let docsURL = try! fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        return URL(string: "data.json", relativeTo: docsURL)!
+        return try! fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
     }()
+    
+    private lazy var dataFile: URL = URL(string: "data.json", relativeTo: docsURL)!
 
     // MARK: Initializers
     
@@ -40,6 +42,14 @@ final class LapTimeStore: CircuitStore {
         return circuits.value.first(where: { $0.name == name })
     }
     
+    func `import`(from url: URL) -> Bool {
+        if let circuits = loadCircuits(from: url) {
+            self.circuits.value = circuits
+            return true
+        }
+        return false
+    }
+    
     // MARK: Private helpers
     
     private func setupBindings() {
@@ -49,8 +59,12 @@ final class LapTimeStore: CircuitStore {
     }
     
     private func loadCircuits() -> [Circuit] {
-        let data = try? Data(contentsOf: dataFile)
-        return data.flatMap { try? JSONDecoder().decode([Circuit].self, from: $0) } ?? []
+        return loadCircuits(from: dataFile) ?? []
+    }
+    
+    private func loadCircuits(from url: URL) -> [Circuit]? {
+        let data = try? Data(contentsOf: url)
+        return data.flatMap { try? JSONDecoder().decode([Circuit].self, from: $0) }
     }
     
     private func saveCircuits(_ circuits: [Circuit]) {
