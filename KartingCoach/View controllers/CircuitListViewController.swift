@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import ReactiveSwift
 import ReactiveCocoa
+import SwinjectAutoregistration
 
 protocol CircuitListFlowDelegate: class {
     func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit)
@@ -52,7 +53,10 @@ final class CircuitListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newCircuitTapped))
+        let newCircuit = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newCircuitTapped))
+        let export = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(exportTapped))
+        
+        navigationItem.rightBarButtonItems = [newCircuit, export]
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -61,6 +65,16 @@ final class CircuitListViewController: BaseViewController {
     }
     
     // MARK: UI actions
+    
+    private lazy var documentInteractionController: UIDocumentInteractionController = {
+        let store = container ~> CircuitStore.self // fuj fuj fuj
+        return UIDocumentInteractionController(url: store.dataFile)
+    }()
+    
+    @objc
+    private func exportTapped(sender: UIBarButtonItem) {
+        documentInteractionController.presentOpenInMenu(from: sender, animated: true)
+    }
     
     @objc
     private func newCircuitTapped() {

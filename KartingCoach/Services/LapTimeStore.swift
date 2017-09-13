@@ -9,6 +9,7 @@ import ReactiveSwift
 
 protocol CircuitStore {
     var circuits: MutableProperty<[Circuit]> { get }
+    var dataFile: URL { get }
     
     func circuit(for name: String) -> Circuit?
     func `import`(from url: URL) -> Bool
@@ -26,7 +27,7 @@ final class LapTimeStore: CircuitStore {
         return try! fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
     }()
     
-    private lazy var dataFile: URL = URL(string: "data.json", relativeTo: docsURL)!
+    lazy var dataFile: URL = URL(string: "data.json", relativeTo: docsURL)!
 
     // MARK: Initializers
     
