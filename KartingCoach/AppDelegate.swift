@@ -25,7 +25,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.sharedManager().enable = true
         
-        
         appFlow.start()
         return true
     }
