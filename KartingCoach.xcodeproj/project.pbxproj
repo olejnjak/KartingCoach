@@ -66,13 +66,15 @@
 		A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */; };
 		A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */; };
 		A32475621F65BF9A00263D04 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32475611F65BF9A00263D04 /* Container.swift */; };
-		A32475671F65C5E000263D04 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475651F65C5E000263D04 /* Swinject.framework */; };
-		A32475681F65C60000263D04 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */; };
 		A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC31F655F38008BCDFC /* Reusable.swift */; };
 		A3786DC61F657118008BCDFC /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC51F657118008BCDFC /* ErrorPresentable.swift */; };
 		A3786DC91F6571B2008BCDFC /* DisplayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC81F6571B2008BCDFC /* DisplayableError.swift */; };
 		A3786DCB1F6571D0008BCDFC /* NewCircuitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */; };
+		A37AEF301F6BB36100BC8B02 /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */; };
+		A37AEF311F6BC0D200BC8B02 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475651F65C5E000263D04 /* Swinject.framework */; };
+		A37AEF321F6BC0D200BC8B02 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */; };
+		A38766921F6AF96E008BC888 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */; };
 		B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */; };
 		EE83C85A1EFE9066CF9E7F2E /* Pods_KartingCoachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */; };
 /* End PBXBuildFile section */
@@ -154,6 +156,8 @@
 		A3786DC51F657118008BCDFC /* ErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresentable.swift; sourceTree = "<group>"; };
 		A3786DC81F6571B2008BCDFC /* DisplayableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableError.swift; sourceTree = "<group>"; };
 		A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCircuitError.swift; sourceTree = "<group>"; };
+		A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
+		A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF672FF604205F70C2F5B12C /* Pods-KartingCoach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,9 +168,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37AEF311F6BC0D200BC8B02 /* Swinject.framework in Frameworks */,
+				A37AEF321F6BC0D200BC8B02 /* SwinjectAutoregistration.framework in Frameworks */,
 				A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */,
-				A32475681F65C60000263D04 /* SwinjectAutoregistration.framework in Frameworks */,
-				A32475671F65C5E000263D04 /* Swinject.framework in Frameworks */,
 				69B216381F65448E00047B7E /* Chameleon.framework in Frameworks */,
 				699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */,
 				699D040B1F37CAD400FC9EB5 /* Result.framework in Frameworks */,
@@ -360,6 +364,7 @@
 		69EFE6721F648A280090740B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */,
 				69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */,
 			);
 			path = Extensions;
@@ -377,6 +382,7 @@
 		69EFE6781F648CF90090740B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */,
 				A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */,
 				A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */,
 				69EFE6791F648D070090740B /* CircuitTableViewCell.swift */,
@@ -699,6 +705,7 @@
 			files = (
 				696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */,
 				69B216361F6540D000047B7E /* Colors.swift in Sources */,
+				A37AEF301F6BB36100BC8B02 /* RaceTableViewCell.swift in Sources */,
 				69B2163C1F65475500047B7E /* NewRaceViewController.swift in Sources */,
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
 				69B2163A1F65471100047B7E /* NewRaceViewModel.swift in Sources */,
@@ -727,6 +734,7 @@
 				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,
 				69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */,
 				69EFE6691F6486E40090740B /* AppDependency.swift in Sources */,
+				A38766921F6AF96E008BC888 /* UICollectionViewExtensions.swift in Sources */,
 				69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */,
 				A32475621F65BF9A00263D04 /* Container.swift in Sources */,
 				69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */,
