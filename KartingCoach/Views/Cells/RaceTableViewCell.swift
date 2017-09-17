@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// TODO: Best time background color
+
 class RaceTableViewCell: UITableViewCell {
     
     private enum Values {
@@ -19,6 +19,7 @@ class RaceTableViewCell: UITableViewCell {
     var race: Race? {
         didSet {
             titleLabel.text = race.map { [$0.name, Formatters.dateFormatter.string(from: $0.date)].flatMap { $0 } }?.joined(separator: " - ")
+            collectionView.reloadData()
         }
     }
     
@@ -66,13 +67,17 @@ class RaceTableViewCell: UITableViewCell {
 extension RaceTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return race?.lapTimes.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let lapTime = race?.lapTimes[indexPath.item]
+        let isBest = lapTime == race?.bestTime
+        
         let cell: LapTimeCollectionViewCell = collectionView.dequeueCell(for: indexPath)
         cell.lapLabel.text = "#\(indexPath.row + 1)"
-        cell.timeLabel.text = "88:59.029"
+        cell.timeLabel.text = lapTime?.description
+        cell.isBest = isBest
         return cell
     }
     

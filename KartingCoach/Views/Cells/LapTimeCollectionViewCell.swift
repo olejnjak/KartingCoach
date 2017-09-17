@@ -12,6 +12,12 @@ class LapTimeCollectionViewCell: UICollectionViewCell {
     weak var lapLabel: UILabel!
     weak var timeLabel: UILabel!
     
+    var isBest = false {
+        didSet {
+            contentView.backgroundColor = isBest ? .bestTime : UIColor(hexString: "EEEEEE")
+        }
+    }
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -27,8 +33,6 @@ class LapTimeCollectionViewCell: UICollectionViewCell {
     // MARK: - Components setup
     
     private func setup() {
-        contentView.backgroundColor = UIColor(hexString: "EEEEEE")
-        
         let lapLabel = UILabel()
         lapLabel.font = .systemFont(ofSize: 14)
         lapLabel.textAlignment = .center

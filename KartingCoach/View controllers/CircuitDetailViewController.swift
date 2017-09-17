@@ -57,7 +57,6 @@ final class CircuitDetailViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewRaceTapped))
         
         tableView.dataSource = self
-//        tableView.delegate = self
         
         setupBindings()
     }
