@@ -28,8 +28,7 @@ final class CircuitDetailViewModel: CircuitDetailViewModeling {
     
     var newRaceVM: NewRaceViewModeling { return factories.newRaceVMFactory(circuit.value) }
     
-    private let (reloadSignal, reloadObserver) = Signal<Void, NoError>.pipe()
-    lazy var reloadData: Signal<Void, NoError> = self.reloadSignal
+    lazy var reloadData: Signal<Void, NoError> = self.races.signal.map { _ in }
     
     private let circuit: MutableProperty<Circuit>
     private let factories: Factories
@@ -55,10 +54,6 @@ final class CircuitDetailViewModel: CircuitDetailViewModeling {
         dependencies.circuitStore.circuits.producer.startWithValues { [weak self] in
             guard let newCircuit = $0.first(where: { $0 == self?.circuit.value }) else { return }
             self?.circuit.value = newCircuit
-        }
-        
-        races.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
-            self.reloadObserver.send(value: ())
         }
     }
     
