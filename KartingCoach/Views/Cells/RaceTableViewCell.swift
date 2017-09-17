@@ -38,7 +38,7 @@ class RaceTableViewCell: UITableViewCell {
     
     private func setup() {
         let titleLabel = UILabel()
-        titleLabel.font = .systemFont(ofSize: 14)
+        titleLabel.font = .systemFont(ofSize: 16)
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview().inset(Values.insets)
@@ -46,13 +46,18 @@ class RaceTableViewCell: UITableViewCell {
         self.titleLabel = titleLabel
         
         let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = CGSize(width: 80, height: 49)
+//        layout.minimumInteritemSpacing = 8
+        layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
+        collectionView.backgroundColor = .clear
         contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(Values.insets.top)
             make.leading.trailing.bottom.equalToSuperview().inset(Values.insets)
+            make.height.equalTo(50)
         }
         self.collectionView = collectionView
     }
@@ -62,13 +67,13 @@ class RaceTableViewCell: UITableViewCell {
 extension RaceTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: LapTimeCollectionViewCell = collectionView.dequeueCell(for: indexPath)
         cell.lapLabel.text = "#\(indexPath.row + 1)"
-        cell.timeLabel.text = "00:59.029"
+        cell.timeLabel.text = "88:59.029"
         return cell
     }
     
@@ -94,7 +99,10 @@ class LapTimeCollectionViewCell: UICollectionViewCell {
     // MARK: - Components setup
     
     private func setup() {
+        contentView.backgroundColor = UIColor(hexString: "EEEEEE")
+        
         let lapLabel = UILabel()
+        lapLabel.font = .systemFont(ofSize: 14)
         lapLabel.textAlignment = .center
         contentView.addSubview(lapLabel)
         lapLabel.snp.makeConstraints { (make) in
@@ -103,12 +111,15 @@ class LapTimeCollectionViewCell: UICollectionViewCell {
         self.lapLabel = lapLabel
         
         let timeLabel = UILabel()
+        timeLabel.font = .systemFont(ofSize: 14)
         timeLabel.textAlignment = .center
+        timeLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
         contentView.addSubview(timeLabel)
         timeLabel.snp.makeConstraints { (make) in
             make.top.equalTo(lapLabel.snp.bottom).offset(5)
             make.leading.trailing.bottom.equalToSuperview().inset(5)
         }
+        self.timeLabel = timeLabel
     }
 
 }
