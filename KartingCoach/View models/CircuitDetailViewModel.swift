@@ -6,11 +6,15 @@
 //
 
 import ReactiveSwift
+import enum Result.NoError
 
 protocol CircuitDetailViewModeling: CircuitDetailHeaderViewModeling {
-    var races: Property<[Race]> { get }
+    var reloadData: Signal<Void, NoError> { get }
     
     var newRaceVM: NewRaceViewModeling { get }
+    
+    func numberOfRows(in section: Int) -> Int
+    func race(for indexPath: IndexPath) -> Race
 }
 
 final class CircuitDetailViewModel: CircuitDetailViewModeling {
@@ -23,6 +27,8 @@ final class CircuitDetailViewModel: CircuitDetailViewModeling {
     let races: Property<[Race]>
     
     var newRaceVM: NewRaceViewModeling { return factories.newRaceVMFactory(circuit.value) }
+    
+    lazy var reloadData: Signal<Void, NoError> = self.races.signal.map { _ in }
     
     private let circuit: MutableProperty<Circuit>
     private let factories: Factories
@@ -49,5 +55,15 @@ final class CircuitDetailViewModel: CircuitDetailViewModeling {
             guard let newCircuit = $0.first(where: { $0 == self?.circuit.value }) else { return }
             self?.circuit.value = newCircuit
         }
+    }
+    
+    // MARK: - Public API
+    
+    func numberOfRows(in section: Int) -> Int {
+        return races.value.count
+    }
+    
+    func race(for indexPath: IndexPath) -> Race {
+        return races.value[indexPath.row]
     }
 }
