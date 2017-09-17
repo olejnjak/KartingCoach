@@ -8,7 +8,7 @@
 import UIKit
 import ReactiveSwift
 
-class NewLapTimeTableViewCell: UITableViewCell {
+final class NewLapTimeTableViewCell: UITableViewCell {
     
     var lapTime: LapTime? {
         didSet {

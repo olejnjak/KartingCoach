@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RaceTableViewCell: UITableViewCell {
+final class RaceTableViewCell: UITableViewCell {
     
     private enum Values {
         static let insets = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15)

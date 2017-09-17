@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LapTimeCollectionViewCell: UICollectionViewCell {
+final class LapTimeCollectionViewCell: UICollectionViewCell {
     
     weak var lapLabel: UILabel!
     weak var timeLabel: UILabel!
