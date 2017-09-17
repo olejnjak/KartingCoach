@@ -16,6 +16,12 @@ class RaceTableViewCell: UITableViewCell {
     private weak var titleLabel: UILabel!
     private weak var collectionView: UICollectionView!
     
+    var race: Race? {
+        didSet {
+            titleLabel.text = race.map { [$0.name, Formatters.dateFormatter.string(from: $0.date)].flatMap { $0 } }?.joined(separator: " - ")
+        }
+    }
+    
     // MARK: - Initialization
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -60,14 +66,18 @@ extension RaceTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell: LapTimeCollectionViewCell = collectionView.dequeueCell(for: indexPath)
+        cell.lapLabel.text = "#\(indexPath.row + 1)"
+        cell.timeLabel.text = "00:59.029"
+        return cell
     }
     
 }
 
 class LapTimeCollectionViewCell: UICollectionViewCell {
     
-    private weak var lapLabel: UILabel!
+    weak var lapLabel: UILabel!
+    weak var timeLabel: UILabel!
     
     // MARK: - Initialization
     
@@ -88,9 +98,17 @@ class LapTimeCollectionViewCell: UICollectionViewCell {
         lapLabel.textAlignment = .center
         contentView.addSubview(lapLabel)
         lapLabel.snp.makeConstraints { (make) in
-            make.top.leading.trailing.equalToSuperview().inset(15)
+            make.top.leading.trailing.equalToSuperview().inset(5)
         }
         self.lapLabel = lapLabel
+        
+        let timeLabel = UILabel()
+        timeLabel.textAlignment = .center
+        contentView.addSubview(timeLabel)
+        timeLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(lapLabel.snp.bottom).offset(5)
+            make.leading.trailing.bottom.equalToSuperview().inset(5)
+        }
     }
 
 }

@@ -57,7 +57,7 @@ final class CircuitDetailViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewRaceTapped))
         
         tableView.dataSource = self
-        tableView.delegate = self
+//        tableView.delegate = self
         
         setupBindings()
     }
@@ -74,8 +74,8 @@ final class CircuitDetailViewController: BaseViewController {
     private func setupBindings() {
         navigationItem.reactive.title <~ viewModel.name
         
-        tableView.reactive.reloadData <~ viewModel.races.producer.map { _ in }
-        tableHeader.reactive.refresh <~ viewModel.races.producer.map { _ in }
+        tableView.reactive.reloadData <~ viewModel.reloadData
+        tableHeader.reactive.refresh <~ viewModel.reloadData
     }
     
     // MARK: Private helpers
@@ -91,31 +91,31 @@ final class CircuitDetailViewController: BaseViewController {
 
 extension CircuitDetailViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.races.value.count
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.races.value[section].lapTimes.count
+        return viewModel.numberOfRows(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let lapTime = viewModel.races.value[indexPath.section].lapTimes[indexPath.row]
-        let cell: LapTimeTableViewCell = tableView.dequeueCell(for: indexPath)
-        cell.setLapTime(time: lapTime, lapNumber: indexPath.row + 1)
-        cell.contentView.backgroundColor = lapTime == viewModel.bestTime.value ? .bestTime : nil
+//        let lapTime = viewModel.races.value[indexPath.section].lapTimes[indexPath.row]
+//        let cell: LapTimeTableViewCell = tableView.dequeueCell(for: indexPath)
+//        cell.setLapTime(time: lapTime, lapNumber: indexPath.row + 1)
+//        cell.contentView.backgroundColor = lapTime == viewModel.bestTime.value ? .bestTime : nil
+//        return cell
+        let cell: RaceTableViewCell = tableView.dequeueCell(for: indexPath)
+        cell.race = viewModel.race(for: indexPath)
         return cell
     }
 }
 
-extension CircuitDetailViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let race = viewModel.races.value[section]
-        let name = [race.name, Formatters.dateFormatter.string(from: race.date)]
-            .flatMap { $0 }
-            .joined(separator: " - ")
-        return name
-    }
-    
-}
+//extension CircuitDetailViewController: UITableViewDelegate {
+//    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let race = viewModel.races.value[section]
+//        let name = [race.name, Formatters.dateFormatter.string(from: race.date)]
+//            .flatMap { $0 }
+//            .joined(separator: " - ")
+//        return name
+//    }
+//    
+//}
+
