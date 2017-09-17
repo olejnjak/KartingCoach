@@ -96,26 +96,8 @@ extension CircuitDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let lapTime = viewModel.races.value[indexPath.section].lapTimes[indexPath.row]
-//        let cell: LapTimeTableViewCell = tableView.dequeueCell(for: indexPath)
-//        cell.setLapTime(time: lapTime, lapNumber: indexPath.row + 1)
-//        cell.contentView.backgroundColor = lapTime == viewModel.bestTime.value ? .bestTime : nil
-//        return cell
         let cell: RaceTableViewCell = tableView.dequeueCell(for: indexPath)
         cell.race = viewModel.race(for: indexPath)
         return cell
     }
 }
-
-//extension CircuitDetailViewController: UITableViewDelegate {
-//    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let race = viewModel.races.value[section]
-//        let name = [race.name, Formatters.dateFormatter.string(from: race.date)]
-//            .flatMap { $0 }
-//            .joined(separator: " - ")
-//        return name
-//    }
-//    
-//}
-

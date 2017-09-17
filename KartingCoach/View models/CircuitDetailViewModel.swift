@@ -9,7 +9,6 @@ import ReactiveSwift
 import enum Result.NoError
 
 protocol CircuitDetailViewModeling: CircuitDetailHeaderViewModeling {
-//    var races: Property<[Race]> { get }
     var reloadData: Signal<Void, NoError> { get }
     
     var newRaceVM: NewRaceViewModeling { get }

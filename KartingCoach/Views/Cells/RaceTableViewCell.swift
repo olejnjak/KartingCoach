@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// TODO: Best time background color
 class RaceTableViewCell: UITableViewCell {
     
     private enum Values {
@@ -47,7 +47,6 @@ class RaceTableViewCell: UITableViewCell {
         
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(width: 80, height: 49)
-//        layout.minimumInteritemSpacing = 8
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -77,49 +76,4 @@ extension RaceTableViewCell: UICollectionViewDataSource {
         return cell
     }
     
-}
-
-class LapTimeCollectionViewCell: UICollectionViewCell {
-    
-    weak var lapLabel: UILabel!
-    weak var timeLabel: UILabel!
-    
-    // MARK: - Initialization
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - Components setup
-    
-    private func setup() {
-        contentView.backgroundColor = UIColor(hexString: "EEEEEE")
-        
-        let lapLabel = UILabel()
-        lapLabel.font = .systemFont(ofSize: 14)
-        lapLabel.textAlignment = .center
-        contentView.addSubview(lapLabel)
-        lapLabel.snp.makeConstraints { (make) in
-            make.top.leading.trailing.equalToSuperview().inset(5)
-        }
-        self.lapLabel = lapLabel
-        
-        let timeLabel = UILabel()
-        timeLabel.font = .systemFont(ofSize: 14)
-        timeLabel.textAlignment = .center
-        timeLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
-        contentView.addSubview(timeLabel)
-        timeLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(lapLabel.snp.bottom).offset(5)
-            make.leading.trailing.bottom.equalToSuperview().inset(5)
-        }
-        self.timeLabel = timeLabel
-    }
-
 }

@@ -66,6 +66,7 @@
 		A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */; };
 		A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */; };
 		A32475621F65BF9A00263D04 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32475611F65BF9A00263D04 /* Container.swift */; };
+		A37096D81F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37096D71F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift */; };
 		A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */; };
 		A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC31F655F38008BCDFC /* Reusable.swift */; };
 		A3786DC61F657118008BCDFC /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC51F657118008BCDFC /* ErrorPresentable.swift */; };
@@ -151,6 +152,7 @@
 		A32475611F65BF9A00263D04 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
 		A32475651F65C5E000263D04 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		A37096D71F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		A3786DC31F655F38008BCDFC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A3786DC51F657118008BCDFC /* ErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresentable.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 		69EFE6781F648CF90090740B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A37096D71F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift */,
 				A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */,
 				A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */,
 				A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */,
@@ -720,6 +723,7 @@
 				69B2162F1F65395600047B7E /* Formatters.swift in Sources */,
 				696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */,
 				69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */,
+				A37096D81F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift in Sources */,
 				696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */,
 				A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */,
 				69A2CD9C1F58C92100E29590 /* Race.swift in Sources */,

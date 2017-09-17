@@ -102,14 +102,6 @@ class NewLapTimeTableViewCell: UITableViewCell {
             .observeValues { [weak self] _ in
                 self?.milisecondsTextField.becomeFirstResponder()
             }
-        
-//        milisecondsTextField.reactive.continuousTextValues
-//            .map { $0 ?? "" }
-//            .filter { $0.count == 3 }
-//            .skipRepeats()
-//            .observeValues { [weak self] _ in
-//                self?.milisecondsTextField.resignFirstResponder()
-//            }
     }
     
     // MARK: - Helpers
@@ -142,7 +134,6 @@ class NewLapTimeTableViewCell: UITableViewCell {
     }
     
 }
-
 
 extension NewLapTimeTableViewCell: UITextFieldDelegate {
     
