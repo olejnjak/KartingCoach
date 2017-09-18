@@ -91,7 +91,7 @@ final class NewCircuitViewController: BaseViewController {
     // MARK: - Bindings
     
     private func setupBindings() {
-        displayErrors(for: viewModel.addCircuit)
+        reactive.errors() <~ viewModel.addCircuit.errors
         
         viewModel.addCircuit.completed.observeValues { [weak self] in self?.flowDelegate?.newCircuitDidAdd(self!) }
         

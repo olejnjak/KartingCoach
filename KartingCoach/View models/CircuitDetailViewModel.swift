@@ -6,7 +6,6 @@
 //
 
 import ReactiveSwift
-import enum Result.NoError
 
 protocol CircuitDetailViewModeling: CircuitDetailHeaderViewModeling {
     var reloadData: Signal<Void, NoError> { get }

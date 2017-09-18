@@ -9,6 +9,9 @@ import UIKit
 import SwinjectAutoregistration
 import IQKeyboardManagerSwift
 
+import enum Result.NoError
+typealias NoError = Result.NoError
+
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
