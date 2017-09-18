@@ -54,6 +54,16 @@ enum L10n {
     /// New race
     static let title = L10n.tr("Localizable", "new_race.title")
   }
+
+  enum Profile {
+    /// Profile
+    static let title = L10n.tr("Localizable", "profile.title")
+  }
+
+  enum RaceList {
+    /// Races
+    static let title = L10n.tr("Localizable", "race_list.title")
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 

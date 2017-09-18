@@ -21,11 +21,21 @@ final class AppFlowController: FlowController {
     // MARK: Flow controller
     
     func start() {
-        let circuitNav = UINavigationController()
-        let circuitFlow = CircuitFlowController(navigationController: circuitNav)
+        let tabBarVC = UITabBarController()
         
-        add(child: circuitFlow)
+        let circuitsNav = UINavigationController()
+        let circuitsFlow = CircuitsFlowController(navigationController: circuitsNav)
+        let racesNav = UINavigationController()
+        let racesFlow = RacesFlowController(navigationController: racesNav)
+        let profileNav = UINavigationController()
+        let profileFlow = ProfileFlowController(navigationController: profileNav)
         
-        window.rootViewController = circuitNav
+        add(child: circuitsFlow)
+        add(child: racesFlow)
+        add(child: profileFlow)
+        
+        tabBarVC.viewControllers = [circuitsNav, racesNav, profileNav]
+        
+        window.rootViewController = tabBarVC
     }
 }

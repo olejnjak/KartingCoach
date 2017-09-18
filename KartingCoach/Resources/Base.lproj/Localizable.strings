@@ -3,6 +3,10 @@
 
 "circuit_list.title" = "Circuits";
 
+"race_list.title" = "Races";
+
+"profile.title" = "Profile";
+
 "new_circuit.title" = "New circuit";
 "new_circuit.placeholder" = "Circuit name";
 "new_circuit.errors.empty_name.title" = "Name cannot be empty";

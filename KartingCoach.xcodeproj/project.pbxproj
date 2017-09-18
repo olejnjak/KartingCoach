@@ -23,16 +23,15 @@
 
 /* Begin PBXBuildFile section */
 		690F5C721F706333002F4F9C /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690F5C711F706333002F4F9C /* UIViewControllerExtensions.swift */; };
-		696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */; };
+		693A035D1F706A34009E4DF8 /* RacesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A035C1F706A34009E4DF8 /* RacesFlowController.swift */; };
+		693A035F1F706A5A009E4DF8 /* CircuitsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A035E1F706A5A009E4DF8 /* CircuitsFlowController.swift */; };
+		693A03611F706A77009E4DF8 /* ProfileFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A03601F706A77009E4DF8 /* ProfileFlowController.swift */; };
+		693A03631F706B52009E4DF8 /* CircuitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A03621F706B52009E4DF8 /* CircuitListViewController.swift */; };
+		693A03651F706B6C009E4DF8 /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A03641F706B6C009E4DF8 /* RaceListViewController.swift */; };
+		693A03671F706B87009E4DF8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A03661F706B87009E4DF8 /* ProfileViewController.swift */; };
 		696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696FD6811F64923D00DDDFE5 /* Localizable.strings */; };
 		696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */; };
 		696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6861F6495EC00DDDFE5 /* Assets.swift */; };
-		696FD68B1F64985900DDDFE5 /* CircuitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68A1F64985900DDDFE5 /* CircuitDetailViewModel.swift */; };
-		696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */; };
-		696FD68F1F649A0B00DDDFE5 /* NewCircuitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */; };
-		696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */; };
-		696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */; };
-		696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
 		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
 		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
@@ -51,28 +50,18 @@
 		69B2162F1F65395600047B7E /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B2162E1F65395600047B7E /* Formatters.swift */; };
 		69B216361F6540D000047B7E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B216351F6540D000047B7E /* Colors.swift */; };
 		69B216381F65448E00047B7E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B216371F65448E00047B7E /* Chameleon.framework */; };
-		69B2163A1F65471100047B7E /* NewRaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B216391F65471100047B7E /* NewRaceViewModel.swift */; };
-		69B2163C1F65475500047B7E /* NewRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B2163B1F65475500047B7E /* NewRaceViewController.swift */; };
 		69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */; };
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
 		69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */; };
-		69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6661F6484BC0090740B /* LapTimeStore.swift */; };
 		69EFE6691F6486E40090740B /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6681F6486E40090740B /* AppDependency.swift */; };
-		69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */; };
 		69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE66D1F64881B0090740B /* BaseViewController.swift */; };
-		69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6701F64886E0090740B /* CircuitListViewModel.swift */; };
 		69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */; };
-		69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6791F648D070090740B /* CircuitTableViewCell.swift */; };
 		A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */; };
-		A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */; };
 		A32475621F65BF9A00263D04 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32475611F65BF9A00263D04 /* Container.swift */; };
-		A37096D81F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37096D71F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift */; };
-		A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */; };
 		A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC31F655F38008BCDFC /* Reusable.swift */; };
 		A3786DC91F6571B2008BCDFC /* DisplayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DC81F6571B2008BCDFC /* DisplayableError.swift */; };
 		A3786DCB1F6571D0008BCDFC /* NewCircuitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */; };
-		A37AEF301F6BB36100BC8B02 /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */; };
 		A37AEF311F6BC0D200BC8B02 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475651F65C5E000263D04 /* Swinject.framework */; };
 		A37AEF321F6BC0D200BC8B02 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */; };
 		A38766921F6AF96E008BC888 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */; };
@@ -101,16 +90,15 @@
 		0C9F7C8A1B667F90BA797A7B /* Pods-KartingCoach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.debug.xcconfig"; sourceTree = "<group>"; };
 		28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		690F5C711F706333002F4F9C /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitFlowController.swift; sourceTree = "<group>"; };
+		693A035C1F706A34009E4DF8 /* RacesFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesFlowController.swift; sourceTree = "<group>"; };
+		693A035E1F706A5A009E4DF8 /* CircuitsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsFlowController.swift; sourceTree = "<group>"; };
+		693A03601F706A77009E4DF8 /* ProfileFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowController.swift; sourceTree = "<group>"; };
+		693A03621F706B52009E4DF8 /* CircuitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewController.swift; sourceTree = "<group>"; };
+		693A03641F706B6C009E4DF8 /* RaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewController.swift; sourceTree = "<group>"; };
+		693A03661F706B87009E4DF8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		696FD6821F64924700DDDFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		696FD6861F6495EC00DDDFE5 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		696FD68A1F64985900DDDFE5 /* CircuitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircuitDetailViewModel.swift; path = "KartingCoach/View models/CircuitDetailViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircuitDetailViewController.swift; path = "KartingCoach/View controllers/CircuitDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
-		696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCircuitViewModel.swift; path = "KartingCoach/View models/NewCircuitViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCircuitViewController.swift; path = "KartingCoach/View controllers/NewCircuitViewController.swift"; sourceTree = SOURCE_ROOT; };
-		696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailHeader.swift; sourceTree = "<group>"; };
-		696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTableViewCell.swift; sourceTree = "<group>"; };
 		699D03F41F37C13500FC9EB5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
@@ -129,8 +117,6 @@
 		69B2162E1F65395600047B7E /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		69B216351F6540D000047B7E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		69B216371F65448E00047B7E /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
-		69B216391F65471100047B7E /* NewRaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewModel.swift; sourceTree = "<group>"; };
-		69B2163B1F65475500047B7E /* NewRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewController.swift; sourceTree = "<group>"; };
 		69BA3DEE1F37B5D000CDC700 /* KartingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KartingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3DF11F37B5D000CDC700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BA3DF81F37B5D000CDC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,26 +125,18 @@
 		69BA3E021F37B5D000CDC700 /* KartingCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KartingCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTests.swift; sourceTree = "<group>"; };
 		69BA3E081F37B5D000CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69EFE6661F6484BC0090740B /* LapTimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeStore.swift; sourceTree = "<group>"; };
 		69EFE6681F6486E40090740B /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
-		69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewController.swift; sourceTree = "<group>"; };
 		69EFE66D1F64881B0090740B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		69EFE6701F64886E0090740B /* CircuitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewModel.swift; sourceTree = "<group>"; };
 		69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
-		69EFE6791F648D070090740B /* CircuitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitTableViewCell.swift; sourceTree = "<group>"; };
 		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31D0F011F697902001601AC /* TPKeyboardAvoidingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TPKeyboardAvoidingKit.framework; path = Carthage/Build/iOS/TPKeyboardAvoidingKit.framework; sourceTree = "<group>"; };
 		A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
-		A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLapTimeTableViewCell.swift; sourceTree = "<group>"; };
 		A32475611F65BF9A00263D04 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		A32475641F65C5E000263D04 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
 		A32475651F65C5E000263D04 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
-		A37096D71F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeCollectionViewCell.swift; sourceTree = "<group>"; };
-		A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		A3786DC31F655F38008BCDFC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A3786DC81F6571B2008BCDFC /* DisplayableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableError.swift; sourceTree = "<group>"; };
 		A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCircuitError.swift; sourceTree = "<group>"; };
-		A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
 		A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +208,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		693A03681F706BDB009E4DF8 /* Circuit list */ = {
+			isa = PBXGroup;
+			children = (
+				693A03621F706B52009E4DF8 /* CircuitListViewController.swift */,
+			);
+			path = "Circuit list";
+			sourceTree = "<group>";
+		};
+		693A03691F706BE4009E4DF8 /* Race list */ = {
+			isa = PBXGroup;
+			children = (
+				693A03641F706B6C009E4DF8 /* RaceListViewController.swift */,
+			);
+			path = "Race list";
+			sourceTree = "<group>";
+		};
+		693A036A1F706BEA009E4DF8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				693A03661F706B87009E4DF8 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		696FD67C1F64921A00DDDFE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,8 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				699D04031F37C4D000FC9EB5 /* AppFlowController.swift */,
-				699D04051F37C4F200FC9EB5 /* FlowController.swift */,
-				696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */,
+				693A035C1F706A34009E4DF8 /* RacesFlowController.swift */,
+				693A035E1F706A5A009E4DF8 /* CircuitsFlowController.swift */,
+				693A03601F706A77009E4DF8 /* ProfileFlowController.swift */,
 			);
 			path = "Flow controllers";
 			sourceTree = "<group>";
@@ -257,10 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				69EFE66C1F64880F0090740B /* Base */,
-				69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */,
-				696FD68C1F6498A700DDDFE5 /* CircuitDetailViewController.swift */,
-				696FD6901F649A2E00DDDFE5 /* NewCircuitViewController.swift */,
-				69B2163B1F65475500047B7E /* NewRaceViewController.swift */,
+				693A03681F706BDB009E4DF8 /* Circuit list */,
+				693A03691F706BE4009E4DF8 /* Race list */,
+				693A036A1F706BEA009E4DF8 /* Profile */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -339,7 +341,6 @@
 		69EFE6651F6484940090740B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				69EFE6661F6484BC0090740B /* LapTimeStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -355,10 +356,6 @@
 		69EFE66F1F64885A0090740B /* View models */ = {
 			isa = PBXGroup;
 			children = (
-				69EFE6701F64886E0090740B /* CircuitListViewModel.swift */,
-				696FD68A1F64985900DDDFE5 /* CircuitDetailViewModel.swift */,
-				696FD68E1F649A0B00DDDFE5 /* NewCircuitViewModel.swift */,
-				69B216391F65471100047B7E /* NewRaceViewModel.swift */,
 			);
 			path = "View models";
 			sourceTree = "<group>";
@@ -377,7 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				69EFE6781F648CF90090740B /* Cells */,
-				696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -385,12 +381,6 @@
 		69EFE6781F648CF90090740B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A37096D71F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift */,
-				A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */,
-				A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */,
-				A3786DC01F655E9C008BCDFC /* TextFieldTableViewCell.swift */,
-				69EFE6791F648D070090740B /* CircuitTableViewCell.swift */,
-				696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -406,6 +396,7 @@
 		A3786DC21F655F30008BCDFC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				699D04051F37C4F200FC9EB5 /* FlowController.swift */,
 				A3786DC81F6571B2008BCDFC /* DisplayableError.swift */,
 				A3786DC31F655F38008BCDFC /* Reusable.swift */,
 			);
@@ -706,42 +697,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */,
 				69B216361F6540D000047B7E /* Colors.swift in Sources */,
-				A37AEF301F6BB36100BC8B02 /* RaceTableViewCell.swift in Sources */,
-				69B2163C1F65475500047B7E /* NewRaceViewController.swift in Sources */,
 				699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */,
 				690F5C721F706333002F4F9C /* UIViewControllerExtensions.swift in Sources */,
-				69B2163A1F65471100047B7E /* NewRaceViewModel.swift in Sources */,
-				696FD6911F649A2E00DDDFE5 /* NewCircuitViewController.swift in Sources */,
-				A3786DC11F655E9C008BCDFC /* TextFieldTableViewCell.swift in Sources */,
-				696FD68D1F6498A700DDDFE5 /* CircuitDetailViewController.swift in Sources */,
-				696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */,
+				693A03611F706A77009E4DF8 /* ProfileFlowController.swift in Sources */,
 				A3786DCB1F6571D0008BCDFC /* NewCircuitError.swift in Sources */,
 				69BA3DF21F37B5D000CDC700 /* AppDelegate.swift in Sources */,
-				696FD68F1F649A0B00DDDFE5 /* NewCircuitViewModel.swift in Sources */,
-				69EFE67A1F648D070090740B /* CircuitTableViewCell.swift in Sources */,
 				69B2162F1F65395600047B7E /* Formatters.swift in Sources */,
+				693A035D1F706A34009E4DF8 /* RacesFlowController.swift in Sources */,
+				693A03631F706B52009E4DF8 /* CircuitListViewController.swift in Sources */,
 				696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */,
 				69A2CD961F58C3D500E29590 /* LapTime.swift in Sources */,
-				A37096D81F6E6C7A00CC1716 /* LapTimeCollectionViewCell.swift in Sources */,
-				696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */,
-				A32475601F65A4DC00263D04 /* NewLapTimeTableViewCell.swift in Sources */,
 				69A2CD9C1F58C92100E29590 /* Race.swift in Sources */,
 				699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */,
+				693A03651F706B6C009E4DF8 /* RaceListViewController.swift in Sources */,
 				69EFE6741F648A3D0090740B /* UITableViewExtensions.swift in Sources */,
-				696FD68B1F64985900DDDFE5 /* CircuitDetailViewModel.swift in Sources */,
 				A3786DC41F655F38008BCDFC /* Reusable.swift in Sources */,
 				A3786DC91F6571B2008BCDFC /* DisplayableError.swift in Sources */,
-				69EFE6711F64886E0090740B /* CircuitListViewModel.swift in Sources */,
 				696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */,
 				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,
-				69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */,
 				69EFE6691F6486E40090740B /* AppDependency.swift in Sources */,
 				A38766921F6AF96E008BC888 /* UICollectionViewExtensions.swift in Sources */,
-				69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */,
 				A32475621F65BF9A00263D04 /* Container.swift in Sources */,
+				693A03671F706B87009E4DF8 /* ProfileViewController.swift in Sources */,
 				69A2CD9E1F58C9E800E29590 /* Circuit.swift in Sources */,
+				693A035F1F706A5A009E4DF8 /* CircuitsFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
