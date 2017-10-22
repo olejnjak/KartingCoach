@@ -23,10 +23,12 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SwiftGen (5.1.1)
+  - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
   - Firebase (~> 4.0)
   - SwiftGen (~> 5.1)
+  - TesseractOCRiOS (~> 4.0)
 
 SPEC CHECKSUMS:
   Firebase: 052c0de688fc87b414996eea13e223dd9fee3fa2
@@ -36,7 +38,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftGen: daba48311d62361eb204a55e579c3c88dd99327e
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
 
-PODFILE CHECKSUM: 8d35ff5bbb25c533eca22c875e75fcb597ffdfc5
+PODFILE CHECKSUM: 51345b4148ce629f7137f12e5a38a722b4518861
 
 COCOAPODS: 1.3.1

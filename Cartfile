@@ -1,12 +1,12 @@
 # Model
-github "ReSwift/ReSwift" ~> 4.0
+# github "ReSwift/ReSwift" ~> 4.0
 github "ReactiveCocoa/ReactiveSwift" ~> 2.0
 github "ReactiveCocoa/ReactiveCocoa" ~> 6.0
 
 # Networking
-github "Alamofire/Alamofire" ~> 4.5
-github "Alamofire/AlamofireImage" ~> 3.2
-github "Alamofire/AlamofireNetworkActivityIndicator" ~> 2.2
+# github "Alamofire/Alamofire" ~> 4.5
+# github "Alamofire/AlamofireImage" ~> 3.2
+# github "Alamofire/AlamofireNetworkActivityIndicator" ~> 2.2
 
 # UI
 github "SnapKit/SnapKit" ~> 4.0
