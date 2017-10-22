@@ -33,10 +33,6 @@
 		696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */; };
 		696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
-		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
-		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
-		699D03FC1F37C13500FC9EB5 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F71F37C13500FC9EB5 /* ReSwift.framework */; };
-		699D03FD1F37C13500FC9EB5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F81F37C13500FC9EB5 /* Alamofire.framework */; };
 		699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04031F37C4D000FC9EB5 /* AppFlowController.swift */; };
 		699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04051F37C4F200FC9EB5 /* FlowController.swift */; };
 		699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */; };
@@ -178,10 +174,6 @@
 				699D040B1F37CAD400FC9EB5 /* Result.framework in Frameworks */,
 				699D040C1F37CAD400FC9EB5 /* ReactiveSwift.framework in Frameworks */,
 				699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */,
-				699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */,
-				699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */,
-				699D03FC1F37C13500FC9EB5 /* ReSwift.framework in Frameworks */,
-				699D03FD1F37C13500FC9EB5 /* Alamofire.framework in Frameworks */,
 				B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,10 +782,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RESOURCES = "$PROJECT_DIR/KartingCoach/Resources";
+				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFTGEN = "$PROJECT_DIR/Pods/SwiftGen/bin/swiftgen";
+				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
 			};
 			name = Debug;
 		};
@@ -803,10 +795,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RESOURCES = "$PROJECT_DIR/KartingCoach/Resources";
+				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFTGEN = "$PROJECT_DIR/Pods/SwiftGen/bin/swiftgen";
+				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
 			};
 			name = Release;
 		};
