@@ -7,6 +7,7 @@
 
 import UIKit
 import ReactiveSwift
+import SimpleImagePicker
 
 protocol NewRaceFlowDelegate: class {
     func newRaceDidCancel(_ viewController: NewRaceViewController)
@@ -23,6 +24,15 @@ final class NewRaceViewController: BaseViewController {
     
     // Flow
     weak var flowDelegate: NewRaceFlowDelegate?
+    
+    private lazy var imagePicker: ImagePicker = {
+        let permissionConfig = PermissionAlertConfiguration(title: "Title", message: "Message", settings: "Settings")
+        let picker = ImagePicker(cancelTitle: L10n.Basic.cancel, permissionConfig: permissionConfig) { image in
+            
+        }
+        
+        return picker
+    }()
     
     // MARK: Initializers
     
@@ -54,7 +64,11 @@ final class NewRaceViewController: BaseViewController {
         
         navigationItem.title = L10n.NewRace.title
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: L10n.NewRace.save, style: .plain, target: self, action: #selector(saveBarButtonTapped(_:)))
+        
+        let saveItem = UIBarButtonItem(title: L10n.NewRace.save, style: .plain, target: self, action: #selector(saveBarButtonTapped(_:)))
+        let ocrItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(ocrBarButtonTapped(_:)))
+        
+        navigationItem.rightBarButtonItems = [saveItem, ocrItem]
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -74,6 +88,14 @@ final class NewRaceViewController: BaseViewController {
         updateLapTimes()
         viewModel.save()
         flowDelegate?.newRaceDidSave(self)
+    }
+    
+    @objc
+    private func ocrBarButtonTapped(_ sender: UIBarButtonItem) {
+        imagePicker.presentImagePicker(withSources: [
+            ImagePickerSource(source: .camera, title: "Camera"),
+            ImagePickerSource(source: .photoLibrary, title: "Photo library")
+            ], mediaTypes: [ImagePickerMediaType.image], from: self)
     }
     
     // MARK: - Bindings

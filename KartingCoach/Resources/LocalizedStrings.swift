@@ -8,6 +8,8 @@ import Foundation
 enum L10n {
 
   enum Basic {
+    /// Cancel
+    static let cancel = L10n.tr("Localizable", "basic.cancel")
     /// ---
     static let noTime = L10n.tr("Localizable", "basic.no_time")
     /// OK

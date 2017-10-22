@@ -12,6 +12,7 @@ github "ReactiveCocoa/ReactiveCocoa" ~> 6.0
 github "SnapKit/SnapKit" ~> 4.0
 github "ViccAlexander/Chameleon" ~> 2.2
 github "hackiftekhar/IQKeyboardManager" ~> 4.0
+github "olejnjak/SimpleImagePicker" ~> 2.0
 
 # DI
 github "Swinject/Swinject" ~> 2.1

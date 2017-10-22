@@ -52,6 +52,7 @@
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
 		69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */; };
+		69BF488F1F9D581B0058C45C /* SimpleImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */; };
 		69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6661F6484BC0090740B /* LapTimeStore.swift */; };
 		69EFE6691F6486E40090740B /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6681F6486E40090740B /* AppDependency.swift */; };
 		69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */; };
@@ -134,6 +135,7 @@
 		69BA3E021F37B5D000CDC700 /* KartingCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KartingCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTests.swift; sourceTree = "<group>"; };
 		69BA3E081F37B5D000CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleImagePicker.framework; path = Carthage/Build/iOS/SimpleImagePicker.framework; sourceTree = "<group>"; };
 		69EFE6661F6484BC0090740B /* LapTimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeStore.swift; sourceTree = "<group>"; };
 		69EFE6681F6486E40090740B /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BF488F1F9D581B0058C45C /* SimpleImagePicker.framework in Frameworks */,
 				A37AEF311F6BC0D200BC8B02 /* Swinject.framework in Frameworks */,
 				A37AEF321F6BC0D200BC8B02 /* SwinjectAutoregistration.framework in Frameworks */,
 				A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */,
@@ -203,6 +206,7 @@
 		5DF8F5BFD31C194FE0920308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */,
 				A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */,
 				A31D0F011F697902001601AC /* TPKeyboardAvoidingKit.framework */,
 				A32475651F65C5E000263D04 /* Swinject.framework */,
@@ -650,6 +654,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManager.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SimpleImagePicker.framework",
 			);
 			name = "Carthage stuff";
 			outputPaths = (
@@ -662,6 +667,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManager.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SimpleImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
