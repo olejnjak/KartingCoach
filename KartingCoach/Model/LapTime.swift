@@ -21,6 +21,30 @@ extension LapTime {
     init(minutes: Int, seconds: Int, miliseconds: Int) {
         self.init(duration: minutes * 60 * 1000 + seconds * 1000 + miliseconds)
     }
+    
+    init?(string: String) {
+        if let int = Int(string) {
+            self.init(duration: int)
+        } else {
+            var components = string.trimmingCharacters(in: .whitespacesAndNewlines)
+                .components(separatedBy: CharacterSet(charactersIn: ".:"))
+                .flatMap { Int($0) }
+            
+            var duration = components.last ?? 0
+            components.removeLast()
+            
+            duration += components.last.flatMap { $0 * 1000 } ?? 0
+            components.removeLast()
+            
+            duration += components.last.flatMap { $0 * 1000 * 60 } ?? 0
+            
+            if duration > 0 {
+                self.init(duration: duration)
+            } else {
+                return nil
+            }
+        }
+    }
 }
 
 extension LapTime: CustomStringConvertible {

@@ -106,6 +106,10 @@ final class NewRaceViewController: BaseViewController {
     
     // MARK: - Helpers
     
+    private func handle(ocrImage image: UIImage) {
+        
+    }
+    
     private func updateLapTimes() {
         var lapTimes: [LapTime] = []
         for item in 0..<viewModel.items.value.count {
