@@ -55,6 +55,22 @@ enum L10n {
     static let save = L10n.tr("Localizable", "new_race.save")
     /// New race
     static let title = L10n.tr("Localizable", "new_race.title")
+
+    enum ImagePicker {
+      /// Camera
+      static let camera = L10n.tr("Localizable", "new_race.image_picker.camera")
+      /// Photo library
+      static let photoLibrary = L10n.tr("Localizable", "new_race.image_picker.photo_library")
+
+      enum Permissions {
+        /// Go to settings
+        static let goToSettings = L10n.tr("Localizable", "new_race.image_picker.permissions.go_to_settings")
+        /// Allow us to read photos to recognize lap times from them
+        static let message = L10n.tr("Localizable", "new_race.image_picker.permissions.message")
+        /// We need permission
+        static let title = L10n.tr("Localizable", "new_race.image_picker.permissions.title")
+      }
+    }
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
