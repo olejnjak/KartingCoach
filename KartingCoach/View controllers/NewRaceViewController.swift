@@ -28,7 +28,7 @@ final class NewRaceViewController: BaseViewController {
     private lazy var imagePicker: ImagePicker = {
         let permissionConfig = PermissionAlertConfiguration(title: "Title", message: "Message", settings: "Settings")
         let picker = ImagePicker(cancelTitle: L10n.Basic.cancel, permissionConfig: permissionConfig) { image in
-            
+            self.handle(ocrImage: image)
         }
         
         return picker
@@ -107,7 +107,7 @@ final class NewRaceViewController: BaseViewController {
     // MARK: - Helpers
     
     private func handle(ocrImage image: UIImage) {
-        
+        viewModel.recognizeLapTimes.apply(image).start()
     }
     
     private func updateLapTimes() {

@@ -30,11 +30,23 @@ extension LapTime {
                 .components(separatedBy: CharacterSet(charactersIn: ".:"))
                 .flatMap { Int($0) }
             
+            if components.isEmpty { return nil }
+            
             var duration = components.last ?? 0
             components.removeLast()
             
+            if components.isEmpty {
+                self.init(duration: duration)
+                return
+            }
+            
             duration += components.last.flatMap { $0 * 1000 } ?? 0
             components.removeLast()
+            
+            if components.isEmpty {
+                self.init(duration: duration)
+                return
+            }
             
             duration += components.last.flatMap { $0 * 1000 * 60 } ?? 0
             

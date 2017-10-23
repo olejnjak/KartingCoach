@@ -14,7 +14,9 @@ extension Reactive where Base: G8RecognitionOperation {
     func recognizeProducer() -> SignalProducer<G8Tesseract, NoError> {
         return SignalProducer { observer, _ in
             self.base.recognitionCompleteBlock = {
+                _ = self.base
                 if let tesseract = $0 {
+                    print(tesseract.recognizedText)
                     observer.send(value: tesseract)
                 }
                 observer.sendCompleted()

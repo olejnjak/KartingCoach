@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		690783131F9E0C11002C7A7A /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 690783121F9E0C11002C7A7A /* tessdata */; };
 		690B24731F9DFE5300FA0025 /* ReactiveTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B24721F9DFE5300FA0025 /* ReactiveTesseract.swift */; };
 		696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */; };
 		696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696FD6811F64923D00DDDFE5 /* Localizable.strings */; };
@@ -98,6 +99,7 @@
 /* Begin PBXFileReference section */
 		0C9F7C8A1B667F90BA797A7B /* Pods-KartingCoach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.debug.xcconfig"; sourceTree = "<group>"; };
 		28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		690783121F9E0C11002C7A7A /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		690B24721F9DFE5300FA0025 /* ReactiveTesseract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTesseract.swift; sourceTree = "<group>"; };
 		696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitFlowController.swift; sourceTree = "<group>"; };
 		696FD6821F64924700DDDFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		69BA3DE31F37B53100CDC700 = {
 			isa = PBXGroup;
 			children = (
+				690783121F9E0C11002C7A7A /* tessdata */,
 				69BA3DF01F37B5D000CDC700 /* KartingCoach */,
 				69BA3E051F37B5D000CDC700 /* KartingCoachTests */,
 				69BA3DEF1F37B5D000CDC700 /* Products */,
@@ -514,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */,
+				690783131F9E0C11002C7A7A /* tessdata in Resources */,
 				696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */,
 				69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */,
 			);
@@ -908,6 +912,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = PXDF48X6VX;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -981,6 +986,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (

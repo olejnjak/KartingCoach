@@ -31,7 +31,9 @@ final class NewRaceViewModel: NewRaceViewModeling {
     
     let items = MutableProperty<[LapTime]>([.zero])
     lazy var recognizeLapTimes: Action<UIImage, [LapTime], NoError> = Action { [unowned self] in
-        return self.recognizeTesseractProducer(for: $0).map { _ in [] }
+        return self.recognizeTesseractProducer(for: $0)
+            .map { $0.recognizedText.components(separatedBy: .newlines) }
+            .map { $0.flatMap { LapTime(string: $0) } }
     }
     
     // MARK: Initializers
@@ -39,6 +41,8 @@ final class NewRaceViewModel: NewRaceViewModeling {
     init(circuit: Circuit, dependencies: Dependencies) {
         self.circuit = circuit
         self.dependencies = dependencies
+        
+        setupBindings()
     }
     
     func addNewLap() {
@@ -65,5 +69,9 @@ final class NewRaceViewModel: NewRaceViewModeling {
         recognizeOperation.tesseract.image = image
         recognizeOperation.tesseract.charWhitelist = "0123456789:."
         return recognizeOperation.reactive.recognizeProducer()
+    }
+    
+    private func setupBindings() {
+        items <~ SignalProducer(recognizeLapTimes.values).withLatest(from: items.producer).map { $0 + $1 }
     }
 }
