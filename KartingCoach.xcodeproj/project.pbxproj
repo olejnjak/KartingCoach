@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		690783131F9E0C11002C7A7A /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 690783121F9E0C11002C7A7A /* tessdata */; };
+		690B24731F9DFE5300FA0025 /* ReactiveTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B24721F9DFE5300FA0025 /* ReactiveTesseract.swift */; };
 		696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */; };
 		696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696FD6811F64923D00DDDFE5 /* Localizable.strings */; };
 		696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */; };
@@ -33,10 +35,6 @@
 		696FD6931F649F2900DDDFE5 /* CircuitDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6921F649F2900DDDFE5 /* CircuitDetailHeader.swift */; };
 		696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
-		699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */; };
-		699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */; };
-		699D03FC1F37C13500FC9EB5 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F71F37C13500FC9EB5 /* ReSwift.framework */; };
-		699D03FD1F37C13500FC9EB5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F81F37C13500FC9EB5 /* Alamofire.framework */; };
 		699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04031F37C4D000FC9EB5 /* AppFlowController.swift */; };
 		699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04051F37C4F200FC9EB5 /* FlowController.swift */; };
 		699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D04071F37CAD400FC9EB5 /* ReactiveCocoa.framework */; };
@@ -56,6 +54,7 @@
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
 		69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */; };
+		69BF488F1F9D581B0058C45C /* SimpleImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */; };
 		69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6661F6484BC0090740B /* LapTimeStore.swift */; };
 		69EFE6691F6486E40090740B /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6681F6486E40090740B /* AppDependency.swift */; };
 		69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */; };
@@ -100,6 +99,8 @@
 /* Begin PBXFileReference section */
 		0C9F7C8A1B667F90BA797A7B /* Pods-KartingCoach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.debug.xcconfig"; sourceTree = "<group>"; };
 		28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		690783121F9E0C11002C7A7A /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		690B24721F9DFE5300FA0025 /* ReactiveTesseract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTesseract.swift; sourceTree = "<group>"; };
 		696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitFlowController.swift; sourceTree = "<group>"; };
 		696FD6821F64924700DDDFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		69BA3E021F37B5D000CDC700 /* KartingCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KartingCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTests.swift; sourceTree = "<group>"; };
 		69BA3E081F37B5D000CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleImagePicker.framework; path = Carthage/Build/iOS/SimpleImagePicker.framework; sourceTree = "<group>"; };
 		69EFE6661F6484BC0090740B /* LapTimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeStore.swift; sourceTree = "<group>"; };
 		69EFE6681F6486E40090740B /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BF488F1F9D581B0058C45C /* SimpleImagePicker.framework in Frameworks */,
 				A37AEF311F6BC0D200BC8B02 /* Swinject.framework in Frameworks */,
 				A37AEF321F6BC0D200BC8B02 /* SwinjectAutoregistration.framework in Frameworks */,
 				A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */,
@@ -178,10 +181,6 @@
 				699D040B1F37CAD400FC9EB5 /* Result.framework in Frameworks */,
 				699D040C1F37CAD400FC9EB5 /* ReactiveSwift.framework in Frameworks */,
 				699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */,
-				699D03FA1F37C13500FC9EB5 /* AlamofireImage.framework in Frameworks */,
-				699D03FB1F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework in Frameworks */,
-				699D03FC1F37C13500FC9EB5 /* ReSwift.framework in Frameworks */,
-				699D03FD1F37C13500FC9EB5 /* Alamofire.framework in Frameworks */,
 				B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +210,7 @@
 		5DF8F5BFD31C194FE0920308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */,
 				A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */,
 				A31D0F011F697902001601AC /* TPKeyboardAvoidingKit.framework */,
 				A32475651F65C5E000263D04 /* Swinject.framework */,
@@ -288,6 +288,7 @@
 		69BA3DE31F37B53100CDC700 = {
 			isa = PBXGroup;
 			children = (
+				690783121F9E0C11002C7A7A /* tessdata */,
 				69BA3DF01F37B5D000CDC700 /* KartingCoach */,
 				69BA3E051F37B5D000CDC700 /* KartingCoachTests */,
 				69BA3DEF1F37B5D000CDC700 /* Products */,
@@ -368,6 +369,7 @@
 			children = (
 				A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */,
 				69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */,
+				690B24721F9DFE5300FA0025 /* ReactiveTesseract.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */,
+				690783131F9E0C11002C7A7A /* tessdata in Resources */,
 				696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */,
 				69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */,
 			);
@@ -583,11 +586,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,10 +652,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
@@ -660,13 +661,10 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManager.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SimpleImagePicker.framework",
 			);
 			name = "Carthage stuff";
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireNetworkActivityIndicator.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
@@ -676,6 +674,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManager.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SimpleImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -736,6 +735,7 @@
 				A3786DC61F657118008BCDFC /* ErrorPresentable.swift in Sources */,
 				696FD6871F6495EC00DDDFE5 /* Assets.swift in Sources */,
 				69EFE66E1F64881B0090740B /* BaseViewController.swift in Sources */,
+				690B24731F9DFE5300FA0025 /* ReactiveTesseract.swift in Sources */,
 				69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */,
 				69EFE6691F6486E40090740B /* AppDependency.swift in Sources */,
 				A38766921F6AF96E008BC888 /* UICollectionViewExtensions.swift in Sources */,
@@ -885,7 +885,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -912,6 +912,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = PXDF48X6VX;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -958,7 +959,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -985,6 +986,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1024,7 +1026,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -1092,7 +1094,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;

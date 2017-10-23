@@ -41,4 +41,20 @@ final class LapTimeTests: XCTestCase {
         
         XCTAssertEqual(average.duration, duration / itemCount)
     }
+    
+    func testStringInitDuration() {
+        let duration = Int(arc4random()) + 20
+        let lapTime = LapTime(string: String(duration))!
+        
+        XCTAssertEqual(lapTime.duration, duration)
+    }
+    
+    func testStringInitLapTime() {
+        let duration = 119348
+        let correctLapTime = LapTime(duration: duration)
+        let durationString = "1:59.348"
+        let testLapTime = LapTime(string: durationString)!
+        
+        XCTAssertEqual(correctLapTime, testLapTime)
+    }
 }

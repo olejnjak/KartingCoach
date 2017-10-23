@@ -1,3 +1,4 @@
+"basic.cancel" = "Cancel";
 "basic.no_time" = "---";
 "basic.ok" = "OK";
 
@@ -11,6 +12,11 @@
 "circuit_detail.average_time" = "Average:";
 "circuit_detail.best_time" = "Best:";
 
-"new_race.title" = "New race";
 "new_race.add" = "Add new lap";
+"new_race.image_picker.camera" = "Camera";
+"new_race.image_picker.photo_library" = "Photo library";
+"new_race.image_picker.permissions.title" = "We need permission";
+"new_race.image_picker.permissions.message" = "Allow us to read photos to recognize lap times from them";
+"new_race.image_picker.permissions.go_to_settings" = "Go to settings";
 "new_race.save" = "Save";
+"new_race.title" = "New race";
