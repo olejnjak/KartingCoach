@@ -1,5 +1,7 @@
 use_frameworks!
 inhibit_all_warnings!
+install! 'cocoapods', :integrate_targets => false
+platform :ios, '10.0'
 
 target 'KartingCoach' do
     # Model
