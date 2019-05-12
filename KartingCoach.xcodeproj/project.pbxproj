@@ -23,6 +23,15 @@
 
 /* Begin PBXBuildFile section */
 		691C660A2288684000EE9A00 /* AppDependency+Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C66092288684000EE9A00 /* AppDependency+Factories.swift */; };
+		691C66112288709C00EE9A00 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C660D2288706400EE9A00 /* Crashlytics.framework */; };
+		691C66122288709C00EE9A00 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C660B2288706400EE9A00 /* FIRAnalyticsConnector.framework */; };
+		691C66132288709C00EE9A00 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C660C2288706400EE9A00 /* FirebaseAnalytics.framework */; };
+		691C661A2288709D00EE9A00 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66142288709D00EE9A00 /* FirebaseCore.framework */; };
+		691C661B2288709D00EE9A00 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66152288709D00EE9A00 /* GoogleUtilities.framework */; };
+		691C661C2288709D00EE9A00 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66162288709D00EE9A00 /* FirebaseCoreDiagnostics.framework */; };
+		691C661D2288709D00EE9A00 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66172288709D00EE9A00 /* GoogleAppMeasurement.framework */; };
+		691C661E2288709D00EE9A00 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66182288709D00EE9A00 /* nanopb.framework */; };
+		691C661F2288709D00EE9A00 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66192288709D00EE9A00 /* FirebaseInstanceID.framework */; };
 		696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */; };
 		696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696FD6811F64923D00DDDFE5 /* Localizable.strings */; };
 		696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */; };
@@ -70,8 +79,6 @@
 		A3786DCB1F6571D0008BCDFC /* NewCircuitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */; };
 		A37AEF301F6BB36100BC8B02 /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */; };
 		A38766921F6AF96E008BC888 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */; };
-		B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */; };
-		EE83C85A1EFE9066CF9E7F2E /* Pods_KartingCoachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,10 +99,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C9F7C8A1B667F90BA797A7B /* Pods-KartingCoach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.debug.xcconfig"; sourceTree = "<group>"; };
-		28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		691C660522885EDF00EE9A00 /* Cartfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Cartfile; sourceTree = "<group>"; };
 		691C66092288684000EE9A00 /* AppDependency+Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDependency+Factories.swift"; sourceTree = "<group>"; };
+		691C660B2288706400EE9A00 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIRAnalyticsConnector.framework; path = Carthage/Build/iOS/FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		691C660C2288706400EE9A00 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Carthage/Build/iOS/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		691C660D2288706400EE9A00 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Carthage/Build/iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		691C66142288709D00EE9A00 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Carthage/Build/iOS/FirebaseCore.framework; sourceTree = "<group>"; };
+		691C66152288709D00EE9A00 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Carthage/Build/iOS/GoogleUtilities.framework; sourceTree = "<group>"; };
+		691C66162288709D00EE9A00 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Carthage/Build/iOS/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		691C66172288709D00EE9A00 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		691C66182288709D00EE9A00 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = Carthage/Build/iOS/nanopb.framework; sourceTree = "<group>"; };
+		691C66192288709D00EE9A00 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitFlowController.swift; sourceTree = "<group>"; };
 		696FD6821F64924700DDDFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -142,7 +156,6 @@
 		69EFE6701F64886E0090740B /* CircuitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitListViewModel.swift; sourceTree = "<group>"; };
 		69EFE6731F648A3D0090740B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		69EFE6791F648D070090740B /* CircuitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitTableViewCell.swift; sourceTree = "<group>"; };
-		8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KartingCoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31D0F011F697902001601AC /* TPKeyboardAvoidingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TPKeyboardAvoidingKit.framework; path = Carthage/Build/iOS/TPKeyboardAvoidingKit.framework; sourceTree = "<group>"; };
 		A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 		A324755F1F65A4DC00263D04 /* NewLapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLapTimeTableViewCell.swift; sourceTree = "<group>"; };
@@ -157,9 +170,6 @@
 		A3786DCA1F6571D0008BCDFC /* NewCircuitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCircuitError.swift; sourceTree = "<group>"; };
 		A37AEF2F1F6BB36100BC8B02 /* RaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
 		A38766911F6AF96E008BC888 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
-		A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoachTests/Pods-KartingCoachTests.release.xcconfig"; sourceTree = "<group>"; };
-		CF672FF604205F70C2F5B12C /* Pods-KartingCoach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KartingCoach.release.xcconfig"; path = "Pods/Target Support Files/Pods-KartingCoach/Pods-KartingCoach.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,12 +177,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691C66112288709C00EE9A00 /* Crashlytics.framework in Frameworks */,
+				691C66132288709C00EE9A00 /* FirebaseAnalytics.framework in Frameworks */,
+				691C66122288709C00EE9A00 /* FIRAnalyticsConnector.framework in Frameworks */,
+				691C661A2288709D00EE9A00 /* FirebaseCore.framework in Frameworks */,
+				691C661C2288709D00EE9A00 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				691C661F2288709D00EE9A00 /* FirebaseInstanceID.framework in Frameworks */,
+				691C661D2288709D00EE9A00 /* GoogleAppMeasurement.framework in Frameworks */,
+				691C661B2288709D00EE9A00 /* GoogleUtilities.framework in Frameworks */,
 				69BF488F1F9D581B0058C45C /* SimpleImagePicker.framework in Frameworks */,
 				A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */,
+				691C661E2288709D00EE9A00 /* nanopb.framework in Frameworks */,
 				699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */,
 				699D040C1F37CAD400FC9EB5 /* ReactiveSwift.framework in Frameworks */,
 				699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */,
-				B1007FB04DCB9E63DE5E43AD /* Pods_KartingCoach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,27 +198,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE83C85A1EFE9066CF9E7F2E /* Pods_KartingCoachTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45FA7F328DC0236D58DCDE11 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0C9F7C8A1B667F90BA797A7B /* Pods-KartingCoach.debug.xcconfig */,
-				CF672FF604205F70C2F5B12C /* Pods-KartingCoach.release.xcconfig */,
-				A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */,
-				ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		5DF8F5BFD31C194FE0920308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				691C66142288709D00EE9A00 /* FirebaseCore.framework */,
+				691C66162288709D00EE9A00 /* FirebaseCoreDiagnostics.framework */,
+				691C66192288709D00EE9A00 /* FirebaseInstanceID.framework */,
+				691C66172288709D00EE9A00 /* GoogleAppMeasurement.framework */,
+				691C66152288709D00EE9A00 /* GoogleUtilities.framework */,
+				691C66182288709D00EE9A00 /* nanopb.framework */,
+				691C660D2288706400EE9A00 /* Crashlytics.framework */,
+				691C660B2288706400EE9A00 /* FIRAnalyticsConnector.framework */,
+				691C660C2288706400EE9A00 /* FirebaseAnalytics.framework */,
 				69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */,
 				A31D0F031F697F3B001601AC /* IQKeyboardManagerSwift.framework */,
 				A31D0F011F697902001601AC /* TPKeyboardAvoidingKit.framework */,
@@ -215,8 +230,6 @@
 				699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */,
 				699D03F71F37C13500FC9EB5 /* ReSwift.framework */,
 				699D03F41F37C13500FC9EB5 /* SnapKit.framework */,
-				8178A08008B6E7B14FB719AC /* Pods_KartingCoach.framework */,
-				28B9AD903F7B483209349B86 /* Pods_KartingCoachTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,7 +296,6 @@
 				69BA3DF01F37B5D000CDC700 /* KartingCoach */,
 				69BA3E051F37B5D000CDC700 /* KartingCoachTests */,
 				69BA3DEF1F37B5D000CDC700 /* Products */,
-				45FA7F328DC0236D58DCDE11 /* Pods */,
 				5DF8F5BFD31C194FE0920308 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -420,11 +432,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69BA3E0D1F37B5D000CDC700 /* Build configuration list for PBXNativeTarget "KartingCoach" */;
 			buildPhases = (
-				A6EF79AC25201D2EDF186A32 /* [CP] Check Pods Manifest.lock */,
 				69BA3DEA1F37B5D000CDC700 /* Sources */,
 				69BA3DEB1F37B5D000CDC700 /* Frameworks */,
 				69BA3DEC1F37B5D000CDC700 /* Resources */,
-				4349DCB1D26A99F6343A2CBF /* [CP] Embed Pods Frameworks */,
 				HZ37Y4PXNG2YYSF0SR3KR7AY /* Carthage */,
 			);
 			buildRules = (
@@ -441,7 +451,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69BA3E0E1F37B5D000CDC700 /* Build configuration list for PBXNativeTarget "KartingCoachTests" */;
 			buildPhases = (
-				58A12CE6F13190491BA4E0B5 /* [CP] Check Pods Manifest.lock */,
 				69BA3DFE1F37B5D000CDC700 /* Sources */,
 				69BA3DFF1F37B5D000CDC700 /* Frameworks */,
 				69BA3E001F37B5D000CDC700 /* Resources */,
@@ -520,44 +529,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4349DCB1D26A99F6343A2CBF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KartingCoach/Pods-KartingCoach-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KartingCoach/Pods-KartingCoach-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		58A12CE6F13190491BA4E0B5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KartingCoachTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		696FD67B1F6491A300DDDFE5 /* Generate string enums */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,24 +557,6 @@
 			shellPath = /bin/sh;
 			shellScript = "$SWIFTGEN xcassets -t swift4 \"$RESOURCES/Assets.xcassets\" > \"$RESOURCES/Assets.swift\"";
 		};
-		A6EF79AC25201D2EDF186A32 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KartingCoach-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		HZ37Y4PXNG2YYSF0SR3KR7AY /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -622,7 +575,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -724,10 +677,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
+				RESOURCES = "$PROJECT_DIR/KartingCoach/Resources";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
+				SWIFTGEN = "$PROJECT_DIR/Pods/SwiftGen/bin/swiftgen";
 			};
 			name = Debug;
 		};
@@ -738,10 +691,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS5H3BD7U5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RESOURCES = $PROJECT_DIR/KartingCoach/Resources;
+				RESOURCES = "$PROJECT_DIR/KartingCoach/Resources";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFTGEN = $PROJECT_DIR/Pods/SwiftGen/bin/swiftgen;
+				SWIFTGEN = "$PROJECT_DIR/Pods/SwiftGen/bin/swiftgen";
 			};
 			name = Release;
 		};
@@ -814,7 +767,6 @@
 		};
 		69BA3E091F37B5D000CDC700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C9F7C8A1B667F90BA797A7B /* Pods-KartingCoach.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -890,7 +842,6 @@
 		};
 		69BA3E0A1F37B5D000CDC700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF672FF604205F70C2F5B12C /* Pods-KartingCoach.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -959,7 +910,6 @@
 		};
 		69BA3E0B1F37B5D000CDC700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3F8C41F83ABDFA50A9486B2 /* Pods-KartingCoachTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1030,7 +980,6 @@
 		};
 		69BA3E0C1F37B5D000CDC700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACE63B0549E19EF5E01D7F74 /* Pods-KartingCoachTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;

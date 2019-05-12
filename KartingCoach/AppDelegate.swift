@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCore
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
@@ -18,6 +19,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: UIApplication delegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         setupAppearance()
