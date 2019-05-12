@@ -1,0 +1,5 @@
+$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework
+$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/SimpleImagePicker.framework
+$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework

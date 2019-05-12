@@ -7,7 +7,6 @@
 
 import UIKit
 import ReactiveSwift
-import SimpleImagePicker
 
 private typealias Texts = L10n.NewRace
 
@@ -26,16 +25,6 @@ final class NewRaceViewController: BaseViewController {
     
     // Flow
     weak var flowDelegate: NewRaceFlowDelegate?
-    
-    private lazy var imagePicker: ImagePicker = {
-        let texts = Texts.ImagePicker.Permissions.self
-        let permissionConfig = PermissionAlertConfiguration(title: texts.title, message: texts.message, settings: texts.goToSettings)
-        let picker = ImagePicker(cancelTitle: L10n.Basic.cancel, permissionConfig: permissionConfig) { image in
-            self.handle(ocrImage: image)
-        }
-        
-        return picker
-    }()
     
     // MARK: Initializers
     
@@ -67,11 +56,7 @@ final class NewRaceViewController: BaseViewController {
         
         navigationItem.title = Texts.title
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
-        
-        let saveItem = UIBarButtonItem(title: Texts.save, style: .plain, target: self, action: #selector(saveBarButtonTapped(_:)))
-        let ocrItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(ocrBarButtonTapped(_:)))
-        
-        navigationItem.rightBarButtonItems = [saveItem, ocrItem]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Texts.save, style: .plain, target: self, action: #selector(saveBarButtonTapped(_:)))
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -93,14 +78,6 @@ final class NewRaceViewController: BaseViewController {
         flowDelegate?.newRaceDidSave(self)
     }
     
-    @objc
-    private func ocrBarButtonTapped(_ sender: UIBarButtonItem) {
-        imagePicker.presentImagePicker(withSources: [
-            ImagePickerSource(source: .camera, title: Texts.ImagePicker.camera),
-            ImagePickerSource(source: .photoLibrary, title: Texts.ImagePicker.photoLibrary)
-            ], mediaTypes: [ImagePickerMediaType.image], from: self)
-    }
-    
     // MARK: - Bindings
     
     private func setupBindings() {
@@ -108,10 +85,6 @@ final class NewRaceViewController: BaseViewController {
     }
     
     // MARK: - Helpers
-    
-    private func handle(ocrImage image: UIImage) {
-        viewModel.recognizeLapTimes.apply(image).start()
-    }
     
     private func updateLapTimes() {
         var lapTimes: [LapTime] = []

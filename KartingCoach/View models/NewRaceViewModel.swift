@@ -6,18 +6,16 @@
 //
 
 import UIKit
-import TesseractOCR
 import ReactiveSwift
 
-typealias NewRaceViewModelFactory = (Circuit) -> NewRaceViewModeling
+typealias NewRaceVMFactory = (Circuit) -> NewRaceViewModeling
 
-protocol HasNewRaceViewModelFactory {
-    var newRaceVMFactory: NewRaceViewModelFactory { get }
+protocol HasNewRaceVMFactory {
+    var newRaceVMFactory: NewRaceVMFactory { get }
 }
 
 protocol NewRaceViewModeling {
     var items: MutableProperty<[LapTime]> { get }
-    var recognizeLapTimes: Action<UIImage, [LapTime], NoError> { get }
     
     func addNewLap()
     func save()
@@ -26,23 +24,16 @@ protocol NewRaceViewModeling {
 final class NewRaceViewModel: NewRaceViewModeling {
     typealias Dependencies = HasCircuitStore
     
-    private let circuit: Circuit
-    private let dependencies: Dependencies
-    
     let items = MutableProperty<[LapTime]>([.zero])
-    lazy var recognizeLapTimes: Action<UIImage, [LapTime], NoError> = Action { [unowned self] in
-        return self.recognizeTesseractProducer(for: $0)
-            .map { $0.recognizedText.components(separatedBy: .newlines) }
-            .map { $0.flatMap { LapTime(string: $0) } }
-    }
+    
+    private let circuit: Circuit
+    private let circuitStore: CircuitStore
     
     // MARK: Initializers
     
-    init(circuit: Circuit, dependencies: Dependencies) {
-        self.circuit = circuit
-        self.dependencies = dependencies
-        
-        setupBindings()
+    init(dependencies: Dependencies, circuit c: Circuit) {
+        circuit = c
+        circuitStore = dependencies.circuitStore
     }
     
     func addNewLap() {
@@ -59,19 +50,6 @@ final class NewRaceViewModel: NewRaceViewModeling {
             guard element == circuit else { return }
             currentCircuits[index] = circuit
         }
-        dependencies.circuitStore.circuits.value = currentCircuits
-    }
-    
-    // MARK: Private helpers
-    
-    private func recognizeTesseractProducer(for image: UIImage) -> SignalProducer<G8Tesseract, NoError> {
-        let recognizeOperation = G8RecognitionOperation(language: "eng")!
-        recognizeOperation.tesseract.image = image
-        recognizeOperation.tesseract.charWhitelist = "0123456789:."
-        return recognizeOperation.reactive.recognizeProducer()
-    }
-    
-    private func setupBindings() {
-        items <~ SignalProducer(recognizeLapTimes.values).withLatest(from: items.producer).map { $0 + $1 }
+        circuitStore.circuits.value = currentCircuits
     }
 }

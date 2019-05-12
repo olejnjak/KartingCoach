@@ -8,7 +8,7 @@
 import ReactiveSwift
 
 protocol CircuitDetailViewModeling: CircuitDetailHeaderViewModeling {
-    var reloadData: Signal<Void, NoError> { get }
+    var reloadData: Signal<Void, Never> { get }
     
     var newRaceVM: NewRaceViewModeling { get }
     
@@ -17,34 +17,35 @@ protocol CircuitDetailViewModeling: CircuitDetailHeaderViewModeling {
 }
 
 final class CircuitDetailViewModel: CircuitDetailViewModeling {
-    typealias Dependencies = HasCircuitStore
-    typealias Factories = HasNewRaceViewModelFactory
+    typealias Dependencies = HasCircuitStore & HasNewRaceVMFactory
     
     let name: Property<String>
     let bestTime: Property<LapTime?>
     let averageTime: Property<LapTime?>
     let races: Property<[Race]>
     
-    var newRaceVM: NewRaceViewModeling { return factories.newRaceVMFactory(circuit.value) }
+    var newRaceVM: NewRaceViewModeling { return newRaceVMFactory(circuit.value) }
     
-    lazy var reloadData: Signal<Void, NoError> = self.races.signal.map { _ in }
+    lazy var reloadData: Signal<Void, Never> = self.races.signal.map { _ in }
     
     private let circuit: MutableProperty<Circuit>
-    private let factories: Factories
-    private let dependencies: Dependencies
+    
+    private let newRaceVMFactory: NewRaceVMFactory
+    private let circuitStore: CircuitStore
     
     // MARK: Initializers
     
-    init(circuit: Circuit, factories: Factories, dependencies: Dependencies) {
-        self.circuit = MutableProperty(circuit)
-        self.factories = factories
-        self.dependencies = dependencies
+    init(dependencies: Dependencies, circuit c: Circuit) {
+        newRaceVMFactory = dependencies.newRaceVMFactory
+        circuitStore = dependencies.circuitStore
+        
+        circuit = MutableProperty(c)
         
         // Binding
-        self.name = self.circuit.map { $0.name }
-        self.bestTime = self.circuit.map { $0.bestTime }
-        self.averageTime = self.circuit.map { $0.averageTime }
-        self.races = self.circuit.map { $0.races }
+        name = circuit.map { $0.name }
+        bestTime = circuit.map { $0.bestTime }
+        averageTime = circuit.map { $0.averageTime }
+        races = circuit.map { $0.races }
         
         setupBindings()
     }

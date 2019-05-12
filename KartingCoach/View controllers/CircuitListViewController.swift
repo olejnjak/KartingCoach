@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 import ReactiveSwift
 import ReactiveCocoa
-import SwinjectAutoregistration
 
 protocol CircuitListFlowDelegate: class {
     func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit)
@@ -66,10 +65,7 @@ final class CircuitListViewController: BaseViewController {
     
     // MARK: UI actions
     
-    private lazy var documentInteractionController: UIDocumentInteractionController = {
-        let store = container ~> CircuitStore.self // fuj fuj fuj
-        return UIDocumentInteractionController(url: store.dataFile)
-    }()
+    private lazy var documentInteractionController = UIDocumentInteractionController(url: viewModel.storeDataFile)
     
     @objc
     private func exportTapped(sender: UIBarButtonItem) {

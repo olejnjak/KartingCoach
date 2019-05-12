@@ -7,7 +7,6 @@ target 'KartingCoach' do
 
     # 3rd parties
     pod 'Firebase', '~> 4.0'
-    pod 'TesseractOCRiOS', '~> 4.0'
 
     target 'KartingCoachTests' do
         inherit! :search_paths

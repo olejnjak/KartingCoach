@@ -20,6 +20,8 @@ protocol HasCircuitStore {
 }
 
 final class LapTimeStore: CircuitStore {
+    typealias Dependencies = HasNoDependency
+    
     let circuits: MutableProperty<[Circuit]>
     
     private let docsURL: URL = {
@@ -31,7 +33,7 @@ final class LapTimeStore: CircuitStore {
 
     // MARK: Initializers
     
-    init() {
+    init(dependencies: Dependencies) {
         circuits = MutableProperty([]) // cannot call loadCircuits directly as circuits are not initialized
         circuits.value = loadCircuits()
         setupBindings()

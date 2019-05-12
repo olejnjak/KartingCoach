@@ -7,15 +7,15 @@ PODS:
   - FirebaseAnalytics (4.0.3):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
   - FirebaseCore (4.0.6):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
   - FirebaseInstanceID (2.0.2):
     - FirebaseCore (~> 4.0)
   - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+  - "GoogleToolboxForMac/NSData+zlib (2.1.1)":
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -23,12 +23,20 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SwiftGen (5.1.1)
-  - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
   - Firebase (~> 4.0)
   - SwiftGen (~> 5.1)
-  - TesseractOCRiOS (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - GoogleToolboxForMac
+    - nanopb
+    - SwiftGen
 
 SPEC CHECKSUMS:
   Firebase: 052c0de688fc87b414996eea13e223dd9fee3fa2
@@ -38,8 +46,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftGen: daba48311d62361eb204a55e579c3c88dd99327e
-  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
 
-PODFILE CHECKSUM: 51345b4148ce629f7137f12e5a38a722b4518861
+PODFILE CHECKSUM: 90df0cb706c02f4b2ef21cf1baade3d55a704ff3
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.1

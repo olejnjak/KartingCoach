@@ -6,11 +6,7 @@
 //
 
 import UIKit
-import SwinjectAutoregistration
 import IQKeyboardManagerSwift
-import enum Result.NoError
-
-typealias NoError = Result.NoError
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,14 +22,14 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         setupAppearance()
         
-        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.shared.enable = true
         
         appFlow.start()
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        let store = container ~> CircuitStore.self
+        let store = dependencies.circuitStore
         return store.import(from: url)
     }
 

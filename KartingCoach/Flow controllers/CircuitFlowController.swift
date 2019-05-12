@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwinjectAutoregistration
 
 final class CircuitFlowController: FlowController {
     var children = [FlowController]()
@@ -22,8 +21,8 @@ final class CircuitFlowController: FlowController {
     // MARK: Flow controller
     
     func start() {
-        let circuitListVM = container ~> CircuitListViewModeling.self
-        let circuitListVC = container ~> (CircuitListViewController.self, argument: circuitListVM)
+        let circuitListVM = CircuitListViewModel(dependencies: dependencies)
+        let circuitListVC = CircuitListViewController(viewModel: circuitListVM)
         circuitListVC.flowDelegate = self
         navigationController.viewControllers = [circuitListVC]
     }
@@ -32,15 +31,15 @@ final class CircuitFlowController: FlowController {
 extension CircuitFlowController: CircuitListFlowDelegate {
     
     func circuitList(_ viewController: CircuitListViewController, didSelect circuit: Circuit) {
-        let detailVM = container ~> (CircuitDetailViewModeling.self, argument: circuit)
-        let detailVC = container ~> (CircuitDetailViewController.self, argument: detailVM)
+        let detailVM = CircuitDetailViewModel(dependencies: dependencies, circuit: circuit)
+        let detailVC = CircuitDetailViewController(viewModel: detailVM)
         detailVC.flowDelegate = self
         navigationController.pushViewController(detailVC, animated: true)
     }
     
     func circuitListDidTapNewCircuit(_ viewController: CircuitListViewController) {
-        let newCircuitVM = container ~> NewCircuitViewModeling.self
-        let newCircuitVC = container ~> (NewCircuitViewController.self, argument: newCircuitVM)
+        let newCircuitVM = NewCircuitViewModel(dependencies: dependencies)
+        let newCircuitVC = NewCircuitViewController(viewModel: newCircuitVM)
         let newCircuitNav = UINavigationController(rootViewController: newCircuitVC)
         newCircuitVC.flowDelegate = self
         viewController.present(newCircuitNav, animated: true, completion: nil)
