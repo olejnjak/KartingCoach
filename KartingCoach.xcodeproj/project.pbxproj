@@ -32,6 +32,7 @@
 		691C661D2288709D00EE9A00 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66172288709D00EE9A00 /* GoogleAppMeasurement.framework */; };
 		691C661E2288709D00EE9A00 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66182288709D00EE9A00 /* nanopb.framework */; };
 		691C661F2288709D00EE9A00 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691C66192288709D00EE9A00 /* FirebaseInstanceID.framework */; };
+		695F829C2288A8E8004275D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 695F829B2288A8E8004275D5 /* GoogleService-Info.plist */; };
 		696FD6761F648EB600DDDFE5 /* CircuitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */; };
 		696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696FD6811F64923D00DDDFE5 /* Localizable.strings */; };
 		696FD6841F6494D900DDDFE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */; };
@@ -112,6 +113,7 @@
 		691C66172288709D00EE9A00 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		691C66182288709D00EE9A00 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = Carthage/Build/iOS/nanopb.framework; sourceTree = "<group>"; };
 		691C66192288709D00EE9A00 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		695F829B2288A8E8004275D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		696FD6751F648EB600DDDFE5 /* CircuitFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitFlowController.swift; sourceTree = "<group>"; };
 		696FD6821F64924700DDDFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -238,6 +240,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		695F829A2288A883004275D5 /* GoogleService */ = {
+			isa = PBXGroup;
+			children = (
+				695F829B2288A8E8004275D5 /* GoogleService-Info.plist */,
+			);
+			path = GoogleService;
+			sourceTree = "<group>";
+		};
 		696FD67C1F64921A00DDDFE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +331,7 @@
 				A3786DC71F6571A8008BCDFC /* Errors */,
 				69EFE6721F648A280090740B /* Extensions */,
 				699D03FF1F37C4C500FC9EB5 /* Flow controllers */,
+				695F829A2288A883004275D5 /* GoogleService */,
 				69A2CD921F58C37A00E29590 /* Model */,
 				A3786DC21F655F30008BCDFC /* Protocols */,
 				696FD67C1F64921A00DDDFE5 /* Resources */,
@@ -522,6 +533,7 @@
 			files = (
 				69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */,
 				697D00D92288A09F00E330D1 /* GoogleService-Info.plist in Resources */,
+				695F829C2288A8E8004275D5 /* GoogleService-Info.plist in Resources */,
 				696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */,
 				69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */,
 			);
