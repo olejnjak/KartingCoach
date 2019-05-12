@@ -9,7 +9,6 @@ import UIKit
 import FirebaseCore
 import IQKeyboardManagerSwift
 
-@UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private lazy var appFlow: AppFlowController = AppFlowController(window: window!)
