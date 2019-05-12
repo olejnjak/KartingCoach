@@ -44,6 +44,7 @@
 		696FD6951F6535F600DDDFE5 /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */; };
 		697D00D522889F7F00E330D1 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D00D422889F7F00E330D1 /* TestAppDelegate.swift */; };
 		697D00D722889FB100E330D1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D00D622889FB100E330D1 /* main.swift */; };
+		697D00D92288A09F00E330D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 697D00D82288A09F00E330D1 /* GoogleService-Info.plist */; };
 		699D03F91F37C13500FC9EB5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D03F41F37C13500FC9EB5 /* SnapKit.framework */; };
 		699D04041F37C4D000FC9EB5 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04031F37C4D000FC9EB5 /* AppFlowController.swift */; };
 		699D04061F37C4F200FC9EB5 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D04051F37C4F200FC9EB5 /* FlowController.swift */; };
@@ -62,7 +63,6 @@
 		69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DF81F37B5D000CDC700 /* Assets.xcassets */; };
 		69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */; };
 		69BA3E071F37B5D000CDC700 /* LapTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA3E061F37B5D000CDC700 /* LapTimeTests.swift */; };
-		69BF488F1F9D581B0058C45C /* SimpleImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BF488E1F9D581A0058C45C /* SimpleImagePicker.framework */; };
 		69EFE6671F6484BC0090740B /* LapTimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6661F6484BC0090740B /* LapTimeStore.swift */; };
 		69EFE6691F6486E40090740B /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE6681F6486E40090740B /* AppDependency.swift */; };
 		69EFE66B1F6487CD0090740B /* CircuitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EFE66A1F6487CD0090740B /* CircuitListViewController.swift */; };
@@ -124,6 +124,7 @@
 		696FD6941F6535F600DDDFE5 /* LapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTableViewCell.swift; sourceTree = "<group>"; };
 		697D00D422889F7F00E330D1 /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		697D00D622889FB100E330D1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		697D00D82288A09F00E330D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		699D03F41F37C13500FC9EB5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		699D03F51F37C13500FC9EB5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		699D03F61F37C13500FC9EB5 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
@@ -189,7 +190,6 @@
 				691C661F2288709D00EE9A00 /* FirebaseInstanceID.framework in Frameworks */,
 				691C661D2288709D00EE9A00 /* GoogleAppMeasurement.framework in Frameworks */,
 				691C661B2288709D00EE9A00 /* GoogleUtilities.framework in Frameworks */,
-				69BF488F1F9D581B0058C45C /* SimpleImagePicker.framework in Frameworks */,
 				A31D0F041F697F3B001601AC /* IQKeyboardManagerSwift.framework in Frameworks */,
 				691C661E2288709D00EE9A00 /* nanopb.framework in Frameworks */,
 				699D040A1F37CAD400FC9EB5 /* ReactiveCocoa.framework in Frameworks */,
@@ -242,11 +242,12 @@
 			isa = PBXGroup;
 			children = (
 				696FD6861F6495EC00DDDFE5 /* Assets.swift */,
-				69B216351F6540D000047B7E /* Colors.swift */,
-				696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */,
 				69BA3DF81F37B5D000CDC700 /* Assets.xcassets */,
+				69B216351F6540D000047B7E /* Colors.swift */,
+				697D00D82288A09F00E330D1 /* GoogleService-Info.plist */,
 				69BA3DFA1F37B5D000CDC700 /* LaunchScreen.storyboard */,
 				696FD6811F64923D00DDDFE5 /* Localizable.strings */,
+				696FD6831F6494D900DDDFE5 /* LocalizedStrings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -520,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BA3DFC1F37B5D000CDC700 /* LaunchScreen.storyboard in Resources */,
+				697D00D92288A09F00E330D1 /* GoogleService-Info.plist in Resources */,
 				696FD67F1F64923D00DDDFE5 /* Localizable.strings in Resources */,
 				69BA3DF91F37B5D000CDC700 /* Assets.xcassets in Resources */,
 			);
