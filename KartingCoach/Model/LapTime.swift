@@ -28,7 +28,7 @@ extension LapTime {
         } else {
             var components = string.trimmingCharacters(in: .whitespacesAndNewlines)
                 .components(separatedBy: CharacterSet(charactersIn: ".:"))
-                .flatMap { Int($0) }
+                .compactMap { Int($0) }
             
             if components.isEmpty { return nil }
             

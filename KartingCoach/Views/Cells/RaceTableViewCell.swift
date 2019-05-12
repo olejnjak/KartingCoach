@@ -18,14 +18,14 @@ final class RaceTableViewCell: UITableViewCell {
     
     var race: Race? {
         didSet {
-            titleLabel.text = race.map { [$0.name, Formatters.dateFormatter.string(from: $0.date)].flatMap { $0 } }?.joined(separator: " - ")
+            titleLabel.text = race.map { [$0.name, Formatters.dateFormatter.string(from: $0.date)].compactMap { $0 } }?.joined(separator: " - ")
             collectionView.reloadData()
         }
     }
     
     // MARK: - Initialization
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setup()

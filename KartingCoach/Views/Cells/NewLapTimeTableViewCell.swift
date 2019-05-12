@@ -31,7 +31,7 @@ final class NewLapTimeTableViewCell: UITableViewCell {
     
     // MARK: - Initialization
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
@@ -87,17 +87,13 @@ final class NewLapTimeTableViewCell: UITableViewCell {
     }
     
     private func setupBindings() {
-        minutesTextField.reactive.continuousTextValues
-            .map { $0 ?? "" }
-            .filter { $0.count == 2 }
+        minutesTextField.reactive.continuousTextValues.filter { $0.count == 2 }
             .skipRepeats()
             .observeValues { [weak self] _ in
                 self?.secondsTextField.becomeFirstResponder()
             }
         
-        secondsTextField.reactive.continuousTextValues
-            .map { $0 ?? "" }
-            .filter { $0.count == 2 }
+        secondsTextField.reactive.continuousTextValues.filter { $0.count == 2 }
             .skipRepeats()
             .observeValues { [weak self] _ in
                 self?.milisecondsTextField.becomeFirstResponder()

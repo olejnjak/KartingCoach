@@ -12,11 +12,11 @@ struct Circuit: Codable {
     let races: [Race]
     
     var bestTime: LapTime? {
-        return races.flatMap { $0.bestTime }.min()
+        return races.compactMap { $0.bestTime }.min()
     }
     
     var averageTime: LapTime? {
-        return races.flatMap { $0.averageTime }.average()
+        return races.compactMap { $0.averageTime }.average()
     }
 }
 
